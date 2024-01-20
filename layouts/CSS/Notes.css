@@ -1,0 +1,62 @@
+.wordarchive {
+    padding-top: 12dvh;
+    min-height: calc(100vh - 1.8em);
+    padding-bottom: 4dvh;
+    align-content: start;
+}
+
+.wordarchive p {
+    font-size: 30px;
+    margin-bottom: 60px;
+    width: 70svw;
+    text-align: start;
+    max-width: 900px;
+}
+
+.wordarchive p br::before {
+    content: "↵";
+    display: block; 
+    position: absolute;
+    top: -1em;
+    right: 0;
+    font-size: 0.8em;
+}
+
+.wordarchive h1,h2,h3,h4,i,b,strike,pre {
+    position: static;
+    padding: 20px 0;
+    text-align: start;
+}
+
+.wordarchive h1 {
+    font-size: clamp(100% - 20px, 9.5vw, 60px);
+    line-height: clamp(100% - 10px, 9.5vw, 70px);
+}
+
+.wordarchive h2 {
+    font-size: clamp(100% - 20px, 9.5vw, 40px);
+    line-height: clamp(100% - 10px, 9.5vw, 50px);
+}
+
+.wordarchive .h3__autor {
+    font-size: clamp(100% - 20px, 9.5vw, 36px);
+    line-height: clamp(100% - 10px, 9.5vw, 46px);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.wordarchive img {
+    width: 90svw;
+    max-width: 600px;
+}
+
+pre {
+    width: 56svw;
+    max-width: 720px;
+}
+
+@media (max-width: 800px) {
+    .wordarchive p {
+        width: 96dvw;
+    }
+}
