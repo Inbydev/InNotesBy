@@ -1,6 +1,19 @@
-    <footer>
-        <p>© 2022 - 2023 Inby</p>
-    </footer>
+	<footer>
+		<p>
+			<a href="https://github.com/Inbydev/Inby.dev">InNotesBy</a> © 2023 - 2024
+			by
+			<a href="https://github.com/Inbydev">Inbydev</a>
+			is licensed under
+			<a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" style="display:inline-block;">CC BY-SA 4.0
+			</a>
+		</p>
+	</footer>
+
+	<style>
+		a {
+			color: var(--tertiary-text);
+		}
+	</style>
     
     <script src="../layouts/JS/loader.js"></script>
 	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

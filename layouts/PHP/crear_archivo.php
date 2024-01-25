@@ -1,27 +1,20 @@
 <?php
+$base_url = realpath(__DIR__);
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $nombreArchivo = $_POST['nombre_archivo'];
     $titulo = $_POST['titulo'];
     $contenido = $_POST['contenido'];
     $autor = $_POST['autor'];
-    $background = "<?php require('../layouts/PHP/background_default.php') ?>";
-
-    if (isset($_POST['cambiarFondo'])) {
-        if ($opcion === 'leaf') {
-            $background = 'ruta/a/la/imagen/leaf.jpg';
-        } elseif ($opcion === 'love') {
-            $background = 'ruta/a/la/imagen/love.jpg';
-        }
-    }
 
     if (isset($_FILES['imagen_subida']) && $_FILES['imagen_subida']['error'] === UPLOAD_ERR_OK) {
 
-        $directorioCarga = '../../notas/images/';
+        $directorioCarga = $base_url . '/notas/images/';
         $nombreArchivoCargado = uniqid() . '_' . $_FILES['imagen_subida']['name'];
 
         if (move_uploaded_file($_FILES['imagen_subida']['tmp_name'], $directorioCarga . $nombreArchivoCargado)) {
-            $imagenGenerada = '../../notas/images/' . $nombreArchivoCargado;
+            $imagenGenerada = $base_url . '/notas/images/' . $nombreArchivoCargado;
             
         } else {
             echo "Error al mover la imagen cargado.";
@@ -35,11 +28,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 
-    $rutaArchivo = 'notas/' . $nombreArchivo . '.php';
+    $rutaArchivo = $base_url . '/notas/' . $nombreArchivo . '.php';
     if (file_exists($rutaArchivo)) {
         echo '<script>
             alert("El nombre de la nota \'' . $nombreArchivo . '\' ya existe. Por favor, elige otro nombre.");
-            window.location.href = "../../InTextBy.php";
+            window.location.href = "<?php echo $base_url; ?>index.php";
         </script>';
         exit;
     }
@@ -48,14 +41,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $contenido = htmlspecialchars($contenido);
         $contenido = nl2br($contenido);
 
-        $contenidoArchivo = "<?php require('../layouts/PHP/head-1.php') ?>
-    <title>Inby ❤ - $nombreArchivo </title>
-<?php require('../layouts/PHP/head-2.php') ?>
-
-<?php require('../layouts/PHP/crear_archivo_content.php') ?>
-
-    $background
-	<?php require('../layouts/PHP/new-header-word-archive.php') ?>
+        $contenidoArchivo = "<?php require('$base_url/layouts/PHP/head.php');
+\$title = 'Inby ❤ - $nombreArchivo';
+\$description = 'Proyecto de Inbydev para crear Notas!';
+\$othercss = '<link rel=\"stylesheet\" href=\"{$base_url}/layouts/CSS/Notes.css\">';
+head(\$title, \$description, \$othercss);
+?>
+    <?php require('$base_url/layouts/PHP/new-header-word-archive.php') ?>
 
     <section class='wordarchive detector'>
         <h1>$titulo</h1>
@@ -64,16 +56,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <img src=\"$imagenGenerada\"> 
     </section>
 
-    <?php require('../layouts/PHP/scripts.php') ?>
+    <?php require('$base_url/layouts/PHP/scripts.php') ?>
 </body>
-</html>
-            ";
+</html>";
 
-            $rutaArchivo = '../../notas/' . $nombreArchivo . '.php';
+            $rutaArchivo = $base_url . '/notas/' . $nombreArchivo . '.php';
 
 
             if (file_put_contents($rutaArchivo, $contenidoArchivo) !== false) {
-                header("Location:../../notas/$nombreArchivo");
+                header("Location:$base_url . /notas/$nombreArchivo");
                 exit();
             } else {
                 echo "Error al crear la nota.";

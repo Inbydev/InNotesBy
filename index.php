@@ -4,24 +4,11 @@ $title = "Inby ❤ - InNotesBy";
 $description = "Proyecto de Inbydev para crear Notas!";
 head($title, $description);
 ?>
-	<link rel="stylesheet" href="layouts/CSS/main.css">
-	<link rel="stylesheet" href="layouts/CSS/InNotesBy.css">
-	<script defer src="/layouts/JS/app.js"></script>
-	<script defer src="layouts/JS/header__notes.js"></script>
-	<script defer src="layouts/JS/header__mobile.js"></script>
-</head>
-
-<body>
-	<div class="icon-load" id="icon-load">
-        <h2>InNotesBy</h2>
-        <h3>Cargando...</h3>
-	</div>
-
 	<?php require('layouts/PHP/header-word.php') ?>
 
 
 	<section class="home" id="home">
-        <img loading="lazy" src="Images/logo_innotesby.webp" alt="InNotesByLogo">
+        <h1>InNotesBy</h1>
         <h2>Crea tu <span>nota!</span></h2>
         <h3><a href="#guide">guía:</a></h3>
 	</section>
@@ -148,9 +135,22 @@ head($title, $description);
         <h3 class="not">¡Ya sabiendo esto, estás preparado para crear tu nota en <span>InNotesBy</span>!</h3>
     </section>
 
-    <footer>
-        <p>© 2022 - 2023 Inby</p>
-    </footer>
+	<footer>
+		<p>
+			<a href="https://github.com/Inbydev/Inby.dev">InNotesBy</a> © 2023 - 2024
+			by
+			<a href="https://github.com/Inbydev">Inbydev</a>
+			is licensed under
+			<a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" style="display:inline-block;">CC BY-SA 4.0
+			</a>
+		</p>
+	</footer>
+
+	<style>
+		a {
+			color: var(--tertiary-text);
+		}
+	</style>
     
 	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
