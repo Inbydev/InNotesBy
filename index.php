@@ -1,8 +1,9 @@
-<?php require('layouts/PHP/head-1.php') ?>
-    <title>Inby ❤ - InNotesBy</title>
-<?php require('layouts/PHP/head-2.php') ?>
-
-	<link rel="icon" href="Images/icono.ico">
+<?php
+require('layouts/PHP/head.php');
+$title = "Inby ❤ - InNotesBy";
+$description = "Proyecto de Inbydev para crear Notas!";
+head($title, $description);
+?>
 	<link rel="stylesheet" href="layouts/CSS/main.css">
 	<link rel="stylesheet" href="layouts/CSS/InNotesBy.css">
 	<script defer src="/layouts/JS/app.js"></script>
