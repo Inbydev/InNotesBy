@@ -1,6 +1,4 @@
 <?php
-$base_url = realpath(__DIR__);
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $nombreArchivo = $_POST['nombre_archivo'];
@@ -10,11 +8,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (isset($_FILES['imagen_subida']) && $_FILES['imagen_subida']['error'] === UPLOAD_ERR_OK) {
 
-        $directorioCarga = $base_url . '/notas/images/';
+        $directorioCarga = '../../notas/images/';
         $nombreArchivoCargado = uniqid() . '_' . $_FILES['imagen_subida']['name'];
 
         if (move_uploaded_file($_FILES['imagen_subida']['tmp_name'], $directorioCarga . $nombreArchivoCargado)) {
-            $imagenGenerada = $base_url . '/notas/images/' . $nombreArchivoCargado;
+            $imagenGenerada = '../../notas/images/' . $nombreArchivoCargado;
             
         } else {
             echo "Error al mover la imagen cargado.";
@@ -28,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 
-    $rutaArchivo = $base_url . '/notas/' . $nombreArchivo . '.php';
+    $rutaArchivo = '../../notas/' . $nombreArchivo . '.php';
     if (file_exists($rutaArchivo)) {
         echo '<script>
             alert("El nombre de la nota \'' . $nombreArchivo . '\' ya existe. Por favor, elige otro nombre.");
@@ -41,30 +39,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $contenido = htmlspecialchars($contenido);
         $contenido = nl2br($contenido);
 
-        $contenidoArchivo = "<?php require('$base_url/layouts/PHP/head.php');
+        $contenidoArchivo = "<?php
+require('../layouts/PHP/head.php');
 \$title = 'Inby ❤ - $nombreArchivo';
 \$description = 'Proyecto de Inbydev para crear Notas!';
-\$othercss = '<link rel=\"stylesheet\" href=\"{$base_url}/layouts/CSS/Notes.css\">';
+\$othercss = '<link rel=\"stylesheet\" href=\"/layouts/CSS/Notes.css\">';
 head(\$title, \$description, \$othercss);
 ?>
-    <?php require('$base_url/layouts/PHP/new-header-word-archive.php') ?>
+    <?php require('../layouts/PHP/new-header-word-archive.php') ?>
 
     <section class='wordarchive detector'>
         <h1>$titulo</h1>
         <h3 class='h3__autor'>Autor: $autor</h3>
-        <p id='markdownParagraph'>$contenido</p>
+        <p class='markdownParagraph'>$contenido</p>
         <img src=\"$imagenGenerada\"> 
     </section>
 
-    <?php require('$base_url/layouts/PHP/scripts.php') ?>
+    <?php require('../layouts/PHP/scripts.php') ?>
 </body>
 </html>";
 
-            $rutaArchivo = $base_url . '/notas/' . $nombreArchivo . '.php';
+            $rutaArchivo = '../../notas/' . $nombreArchivo . '.php';
 
 
             if (file_put_contents($rutaArchivo, $contenidoArchivo) !== false) {
-                header("Location:$base_url . /notas/$nombreArchivo");
+                header("Location: $rutaArchivo");
                 exit();
             } else {
                 echo "Error al crear la nota.";

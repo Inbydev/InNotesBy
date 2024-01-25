@@ -1,10 +1,13 @@
-<?php require('../layouts/PHP/head-1.php') ?>
-    <title>Inby ❤ - Testeo de Markdown </title>
-<?php require('../layouts/PHP/head-2.php') ?>
+<?php
+require('../layouts/PHP/head.php');
+$title = 'Inby ❤ - Testeo de Markdown';
+$description = 'Proyecto de Inbydev para crear Notas!';
+$othercss = '<link rel="stylesheet" href="/layouts/CSS/Notes.css">';
+head($title, $description, $othercss);
+?>
+    <?php require('../layouts/PHP/new-header-word-archive.php') ?>
 
-<?php require('../layouts/PHP/crear_archivo_content.php') ?>
-
-	<?php require('../layouts/PHP/header-word-archive.php') ?>
+    <?php require('../layouts/PHP/header-word-archive.php') ?>
 
     <section class='wordarchive detector'>
         <h1>Testeo de Markdown</h1>
@@ -32,4 +35,3 @@ PRONTO SE VIENE MUCHO MAAAAS</p>
     <?php require('../layouts/PHP/scripts.php') ?>
 </body>
 </html>
-            

@@ -1,17 +1,17 @@
-<?php require('../layouts/PHP/head-1.php') ?>
-    <title>Inby ❤ - em, rem y sus funcionalidades </title>
-    <link href="../layouts/CSS/prism.css" rel="stylesheet"/>
-<?php require('../layouts/PHP/head-2.php') ?>
-
-<?php require('../layouts/PHP/crear_archivo_content.php') ?>
-
-    <?php require('../layouts/PHP/background_default.php') ?>
-	<?php require('../layouts/PHP/new-header-word-archive.php') ?>
+<?php
+require('../layouts/PHP/head.php');
+$title = 'Inby ❤ - em, rem y sus funcionalidades';
+$description = 'Proyecto de Inbydev para crear Notas!';
+$othercss = '<link rel="stylesheet" href="/layouts/CSS/Notes.css">
+<link href="../layouts/CSS/prism.css" rel="stylesheet"/>';
+head($title, $description, $othercss);
+?>
+    <?php require('../layouts/PHP/new-header-word-archive.php') ?>
 
     <section class='wordarchive detector'>
         <h1>em, rem y sus funcionalidades</h1>
         <h3 class='h3__autor'>Autor: Infisito</h3>
-        <p id='markdownParagraph'>**EM** y **REM** son dos unidades CSS relativas al **font-size existente de cada elemento** [elemento padre o la etiqueta html, respectivamente], las diferencias de ambas son como funcionan y casos de uso.<br />
+        <p class='markdownParagraph'>**EM** y **REM** son dos unidades CSS relativas al **font-size existente de cada elemento** [elemento padre o la etiqueta html, respectivamente], las diferencias de ambas son como funcionan y casos de uso.<br />
 <br />
 #EM#<br />
 <br />
@@ -35,7 +35,7 @@ si tienes un HTML:
 &lt;/header>
     </code>
 </pre>
-<p id='markdownParagraph'>
+<p class='markdownParagraph'>
 <br />
 y ocupas EM:
 <br />
@@ -52,7 +52,7 @@ header {
 }
     </code>
 </pre>
-<p id='markdownParagraph'>
+<p class='markdownParagraph'>
 <br />
 lo que pasara será que el width del header será **2 veces el tamaño del font-size del header**, en este caso 20 píxeles, teniendo un width de 40 píxeles.<br />
 <br />
@@ -66,7 +66,7 @@ si tienes el mismo HTML:
 &lt;/header>
     </code>
 </pre>
-<p id='markdownParagraph'>
+<p class='markdownParagraph'>
 <br />
 y ocuparas rem:
 <br />
@@ -83,14 +83,12 @@ header {
 }
     </code>
 </pre>
-<p id='markdownParagraph'>
+<p class='markdownParagraph'>
 <br />
 lo que pasara será que el width del header será **2 veces el tamaño del font-size del html**, en este caso 16 píxeles, teniendo un width de 32 píxeles.</p>
         <img src=""> 
     </section>
 
     <?php require('../layouts/PHP/scripts.php') ?>
-    <script src="../layouts/JS/prism.js"></script>
 </body>
 </html>
-            

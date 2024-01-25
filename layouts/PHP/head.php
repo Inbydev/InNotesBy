@@ -1,5 +1,5 @@
 <?php
-function head($title, $description, $othercss = null) {
+function head($title, $description, $othercss = null, $headerjs = null) {
 	echo <<<HTML
 <!DOCTYPE html>
 <html lang="es">
@@ -16,12 +16,11 @@ function head($title, $description, $othercss = null) {
 	<meta property="og:description" content="$description">
 	<link rel="icon" href="Images/icono.ico">
 	<title>$title</title>
-	<link rel="stylesheet" href="./layouts/CSS/main.css">
-	<link rel="stylesheet" href="./layouts/CSS/InNotesBy.css">
+	<link rel="stylesheet" href="/layouts/CSS/main.css">
+	<link rel="stylesheet" href="/layouts/CSS/InNotesBy.css">
 	$othercss
-	<script defer src="./layouts/JS/app.js"></script>
-	<script defer src="./layouts/JS/header__notes.js"></script>
-	<script defer src="./layouts/JS/header__mobile.js"></script>
+	<script defer src="/layouts/JS/app.js"></script>
+	<script defer src="/layouts/JS/header__mobile.js"></script>
 </head>
 
 

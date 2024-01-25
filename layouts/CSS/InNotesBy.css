@@ -531,6 +531,7 @@ article {
 .cardss .cardn span {
   transition: var(--h-s);
   opacity: 0;
+  padding: 0;
 }
 
 

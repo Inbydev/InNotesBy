@@ -1,7 +1,8 @@
 <?php
 require('layouts/PHP/head.php');
-$title = "Inby ❤ - InNotesBy";
-$description = "Proyecto de Inbydev para crear Notas!";
+$title = 'Inby ❤ - InNotesBy';
+$description = 'Proyecto de Inbydev para crear Notas!';
+$headerjs = '<script defer src="/layouts/JS/header__notes.js"></script>';
 head($title, $description);
 ?>
 	<?php require('layouts/PHP/header-word.php') ?>

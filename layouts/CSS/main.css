@@ -15,128 +15,11 @@ img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhos
 }
 
 @font-face {
-    font-family: "Great Vibes";
+    font-family: "RubikDoodleShadow";
     src:
-        url("/layouts/FONTS/GreatVibes-Regular.woff2") format("woff2"),
-        url("/layouts/FONTS/GreatVibes-Regular.woff") format("woff"),
-        url("/layouts/FONTS/GreatVibes-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "1";
-    src:
-        url("/layouts/FONTS/new/Courgette-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "2";
-    src:
-        url("/layouts/FONTS/new/RubikDoodleShadow-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "3";
-    src:
-        url("/layouts/FONTS/new/Akronim-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "4";
-    src:
-        url("/layouts/FONTS/new/BungeeShade-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "5";
-    src:
-        url("/layouts/FONTS/new/Ewert-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "6";
-    src:
-        url("/layouts/FONTS/new/JacquesFrancoisShadow-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "7";
-    src:
-        url("/layouts/FONTS/new/LondrinaShadow-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "8";
-    src:
-        url("/layouts/FONTS/new/MoiraiOne-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "9";
-    src:
-        url("/layouts/FONTS/new/Neonderthaw-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "10";
-    src:
-        url("/layouts/FONTS/new/RampartOne-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "11";
-    src:
-        url("/layouts/FONTS/new/Rubik80sFade-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "12";
-    src:
-        url("/layouts/FONTS/new/TiltPrism-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "13";
-    src:
-        url("/layouts/FONTS/new/VastShadow-Regular.ttf") format("truetype");
+        /* url("../public/FONTS/GreatVibes-Regular.woff2") format("woff2"),
+        url("../public/FONTS/GreatVibes-Regular.woff") format("woff"), */
+        url("/layouts/FONTS/RubikDoodleShadow-Regular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
     font-display: swap;
@@ -321,7 +204,7 @@ p {
 
 h1 {
     font-size: clamp(100% - 0.125rem, 28vw, 12rem);
-    font-family: "2";
+    font-family: "RubikDoodleShadow";
     margin-right: 50px;
     padding: 15px;
     background: linear-gradient(
@@ -435,13 +318,14 @@ header
     .header__link
     .header__logo {
     font-size: 70px;
-    font-family: "2";
+    font-family: "RubikDoodleShadow";
     background: linear-gradient(to right, var(--primary-text), var(--secondary-text), var(--tertiary-text));
     -webkit-background-clip: text;
     background-clip: text;
     background-size: 200%;
     color: transparent;
     transition: background 0.2s ease;
+    padding: 0;
 }
 
 header
@@ -507,13 +391,14 @@ header
     .header__mobile__link
     .header__mobile__logo {
         font-size: 44px;
-        font-family: "2";
+        font-family: "RubikDoodleShadow";
         background: linear-gradient(to right, var(--primary-text), var(--secondary-text), var(--tertiary-text));
         -webkit-background-clip: text;
         background-clip: text;
         background-size: 200%;
         color: transparent;
         transition: background 0.2s ease;
+        padding: 0;
 }
 
 
