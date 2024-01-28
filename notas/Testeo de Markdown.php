@@ -1,18 +1,16 @@
 <?php
 require('../layouts/PHP/head.php');
-$title = 'Inby ❤ - Testeo de Markdown';
+$title = 'InNotesBy ❤ - Testeo de Markdown';
 $description = 'Proyecto de Inbydev para crear Notas!';
 $othercss = '<link rel="stylesheet" href="/layouts/CSS/Notes.css">';
 head($title, $description, $othercss);
 ?>
-    <?php require('../layouts/PHP/new-header-word-archive.php') ?>
-
-    <?php require('../layouts/PHP/header-word-archive.php') ?>
+    <?php require('../layouts/PHP/header-notes.php') ?>
 
     <section class='wordarchive detector'>
         <h1>Testeo de Markdown</h1>
         <h3 class='h3__autor'>Autor: Infisito</h3>
-        <p id='markdownParagraph'>#Esto será un testeo del Markdown, básicamente, de las diferentes tipos de formatos de texto#<br />
+        <p class='markdownParagraph'>#Esto será un testeo del Markdown, básicamente, de las diferentes tipos de formatos de texto#<br />
 <br />
 _itálica_<br />
 <br />

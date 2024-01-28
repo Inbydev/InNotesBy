@@ -1,16 +1,17 @@
-<?php require('../layouts/PHP/head-1.php') ?>
-    <title>Inby ❤ - Existencialismo y Fundamentos de la Moral </title>
-<?php require('../layouts/PHP/head-2.php') ?>
+<?php
+require('../layouts/PHP/head.php');
+$title = 'InNotesBy ❤ - Existencialismo y Fundamentos de la Moral';
+$description = 'Proyecto de Inbydev para crear Notas!';
+$othercss = '<link rel="stylesheet" href="/layouts/CSS/Notes.css">';
+head($title, $description, $othercss);
+?>
 
-<?php require('../layouts/PHP/crear_archivo_content.php') ?>
-
-    <?php require('../layouts/PHP/background_default.php') ?>
-	<?php require('../layouts/PHP/new-header-word-archive.php') ?>
+    <?php require('../layouts/PHP/header-notes.php') ?>
 
     <section class='wordarchive detector'>
         <h1>Existencialismo y Fundamentos de la Moral</h1>
         <h3 class='h3__autor'>Autor: Infisito</h3>
-        <p id='markdownParagraph'>#Existencialismo#<br />
+        <p class='markdownParagraph'>#Existencialismo#<br />
 <br />
 _"Soy libre con un grado de responsabilidad"_, se comienza a ver esta filosofía de una manera pesimista; _"Uno también se hace responsable de las acciones de los demás"._ Porque toda acción sirve como ejemplo para los demás.<br />
 <br />
@@ -60,7 +61,7 @@ Cuando hay una persona sin amor propio está _**ahí**_ para romper las normas p
 Todas las relaciones se forman por algún motivo, como un intercambio o para satisfacer necesidades.<br />
 <br />
 Cuando falta uno de estos fundamentos, la norma se debilita y puede desaparecer con el tiempo. Pero si sigue manteniendo todos estos, entonces permanecerá vigente a lo largo del tiempo.</p>
-        <img src="../../notas/images/64d1b0b5abf6e_e4cc03fa37be34c26911c0dbf780fd67.jpg"> 
+        <img src="/notas/images/64d1b0b5abf6e_e4cc03fa37be34c26911c0dbf780fd67.jpg"> 
     </section>
 
     <?php require('../layouts/PHP/scripts.php') ?>

@@ -1,12 +1,12 @@
 <?php
 require('../layouts/PHP/head.php');
-$title = 'Inby ❤ - em, rem y sus funcionalidades';
+$title = 'InNotesBy ❤ - em, rem y sus funcionalidades';
 $description = 'Proyecto de Inbydev para crear Notas!';
 $othercss = '<link rel="stylesheet" href="/layouts/CSS/Notes.css">
 <link href="../layouts/CSS/prism.css" rel="stylesheet"/>';
 head($title, $description, $othercss);
 ?>
-    <?php require('../layouts/PHP/new-header-word-archive.php') ?>
+    <?php require('../layouts/PHP/header-notes.php') ?>
 
     <section class='wordarchive detector'>
         <h1>em, rem y sus funcionalidades</h1>

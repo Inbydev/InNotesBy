@@ -59,7 +59,7 @@ footer {
     background: var(--background-header);
     display: grid;
     place-content: center;
-    padding: .4em 0;
+    padding: .2em 0;
 }
 
 footer p {

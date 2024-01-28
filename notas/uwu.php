@@ -1,15 +1,17 @@
-<?php require('../layouts/PHP/head-1.php') ?>
-    <title>Inby ❤ - uwu</title>
-<?php require('../layouts/PHP/head-2.php') ?>
+<?php
+require('../layouts/PHP/head.php');
+$title = 'InNotesBy ❤ - uwu';
+$description = 'Proyecto de Inbydev para crear Notas!';
+$othercss = '<link rel="stylesheet" href="/layouts/CSS/Notes.css">';
+head($title, $description, $othercss);
+?>
 
-<?php require('../layouts/PHP/crear_archivo_content.php') ?>
-
-	<?php require('../layouts/PHP/header-word-archive.php') ?>
+	<?php require('../layouts/PHP/header-notes.php') ?>
 
     <section class='wordarchive detector'>
         <h1>El mejor</h1>
         <h3 class='h3__autor'>Autor: ay</h3>
-        <p id='markdownParagraph'>**Contenido** _--+18--_</p>
+        <p class='markdownParagraph'>**Contenido** _--+18--_</p>
     </section>
 
     <?php require('../layouts/PHP/scripts.php') ?>
