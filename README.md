@@ -10,6 +10,7 @@ To contribute to this project, you can:
 Your contributions and efforts to improve this project are greatly valued!
 
 ## License
+
 <h3>
 <a href="https://github.com/Inbydev/InNotesBy">InNotesBy</a> © 2023 - 2024
 by
