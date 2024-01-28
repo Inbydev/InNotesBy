@@ -3,15 +3,15 @@ require('layouts/PHP/head.php');
 $title = 'Inby ❤ - InNotesBy';
 $description = 'Proyecto de Inbydev para crear Notas!';
 $headerjs = '<script defer src="/layouts/JS/header__notes.js"></script>';
-head($title, $description);
+head($title, $description, $headerjs);
 ?>
-	<?php require('layouts/PHP/header-word.php') ?>
+	<?php require('layouts/PHP/header.php') ?>
 
 
 	<section class="home" id="home">
         <h1>InNotesBy</h1>
         <h2>Crea tu <span>nota!</span></h2>
-        <h3><a href="#guide">guía:</a></h3>
+        <h3><a href="#guide">Guía de como usar este proyecto:</a></h3>
 	</section>
 
 	<section class="formsection detector" id="create">
