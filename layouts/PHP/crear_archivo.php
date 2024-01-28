@@ -41,12 +41,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $contenidoArchivo = "<?php
 require('../layouts/PHP/head.php');
-\$title = 'Inby ❤ - $nombreArchivo';
+\$title = 'InNotesBy ❤ - $nombreArchivo';
 \$description = 'Proyecto de Inbydev para crear Notas!';
 \$othercss = '<link rel=\"stylesheet\" href=\"/layouts/CSS/Notes.css\">';
 head(\$title, \$description, \$othercss);
 ?>
-    <?php require('../layouts/PHP/new-header-word-archive.php') ?>
+    <?php require('../layouts/PHP/header-notes.php') ?>
 
     <section class='wordarchive detector'>
         <h1>$titulo</h1>
