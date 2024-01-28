@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]
 {
     display: none;
@@ -6,9 +11,9 @@ img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhos
 @font-face {
     font-family: "Concert One";
     src:
-        url("/layouts/FONTS/ConcertOne-Regular.woff2") format("woff2"),
-        url("/layouts/FONTS/ConcertOne-Regular.woff") format("woff"),
-        url("/layouts/FONTS/ConcertOne-Regular.ttf") format("truetype");
+        url("/public/FONTS/ConcertOne-Regular.woff2") format("woff2"),
+        url("/public/FONTS/ConcertOne-Regular.woff") format("woff"),
+        url("/public/FONTS/ConcertOne-Regular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
     font-display: swap;
@@ -17,9 +22,9 @@ img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhos
 @font-face {
     font-family: "RubikDoodleShadow";
     src:
-        /* url("../public/FONTS/GreatVibes-Regular.woff2") format("woff2"),
-        url("../public/FONTS/GreatVibes-Regular.woff") format("woff"), */
-        url("/layouts/FONTS/RubikDoodleShadow-Regular.ttf") format("truetype");
+        url("/public/FONTS/RubikDoodleShadow-Regular.woff2") format("woff2"),
+        url("/public/FONTS/RubikDoodleShadow-Regular.woff") format("woff"),
+        url("/public/FONTS/RubikDoodleShadow-Regular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
     font-display: swap;
@@ -58,9 +63,13 @@ footer {
 }
 
 footer p {
-    font-size: 1.4em;
+    font-size: clamp(1rem, 4vw, 1.6rem);
     line-height: 1em;
     padding: 0;
+}
+
+footer a {
+    color: var(--tertiary-text);
 }
 
 .icon-load {
@@ -79,12 +88,6 @@ footer p {
     left: 0;
     right: 0;
     top: -10dvh;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 ul,
@@ -205,8 +208,8 @@ p {
 h1 {
     font-size: clamp(100% - 0.125rem, 28vw, 12rem);
     font-family: "RubikDoodleShadow";
-    margin-right: 50px;
-    padding: 15px;
+    margin: 0;
+    padding: 15px 15px 30px 30px;
     background: linear-gradient(
         to right,
         var(--primary-text),
@@ -219,6 +222,7 @@ h1 {
 
 h2 {
     font-size: clamp(100% - 20px, 11.5vw, 50px);
+    text-wrap: pretty;
 }
 
 h3 {
@@ -247,7 +251,7 @@ section {
 .detector {
     opacity: 0;
     filter: blur(5px);
-    transform: translateX(-10%);
+    transform: translateX(-4%);
     transition: var(--a-s);
 }
 
@@ -325,7 +329,6 @@ header
     background-size: 200%;
     color: transparent;
     transition: background 0.2s ease;
-    padding: 0;
 }
 
 header
@@ -336,15 +339,16 @@ header
     background-position-x: -166px;
     cursor: pointer;
 }
-
 .header__mobile__container {
     z-index: 4;
     display: none;
     justify-content: center;
-    width: 100%;
+    width: 98%;
     position: fixed;
-    top: 84dvh;
+    inset: 84dvh auto auto 50%;
+    transform: translate(-50%, -50%);
 }
+
 .header__mobile__container
     .header__mobile {
     position: relative;
@@ -398,7 +402,6 @@ header
         background-size: 200%;
         color: transparent;
         transition: background 0.2s ease;
-        padding: 0;
 }
 
 
@@ -529,15 +532,5 @@ section[id] {
 
     section[id] {
         scroll-margin-top: 8dvh;
-    }
-}
-
-@media (max-width: 401px) {
-    h1::before {
-        inset: 43svh 4em 0 0 !important;
-    }
-
-    h1::after {
-        inset: 43.6vh 0 0 5.4em !important;
     }
 }

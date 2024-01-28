@@ -52,7 +52,7 @@ head(\$title, \$description, \$othercss);
         <h1>$titulo</h1>
         <h3 class='h3__autor'>Autor: $autor</h3>
         <p class='markdownParagraph'>$contenido</p>
-        <img src=\"$imagenGenerada\"> 
+        <img src=\"$imagenGenerada\">
     </section>
 
     <?php require('../layouts/PHP/scripts.php') ?>

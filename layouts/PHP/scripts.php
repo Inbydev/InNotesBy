@@ -8,12 +8,6 @@
 			</a>
 		</p>
 	</footer>
-
-	<style>
-		a {
-			color: var(--tertiary-text);
-		}
-	</style>
     
     <script src="/layouts/JS/loader.js"></script>
 	<script src="/layouts/JS/prism.js"></script>

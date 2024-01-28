@@ -14,7 +14,7 @@ function head($title, $description, $othercss = null, $headerjs = null) {
 	<meta name="theme-color" content="#896db7">
 	<meta property="og:title" content="$title">
 	<meta property="og:description" content="$description">
-	<link rel="icon" href="Images/icono.ico">
+	<link rel="icon" href="/Images/icono.ico">
 	<title>$title</title>
 	<link rel="stylesheet" href="/layouts/CSS/main.css">
 	<link rel="stylesheet" href="/layouts/CSS/InNotesBy.css">
