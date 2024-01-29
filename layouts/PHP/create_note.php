@@ -50,7 +50,7 @@ head(\$title, \$description, \$othercss);
 
     <section class='wordarchive detector'>
         <h1>$titulo</h1>
-        <h3 class='h3__autor'>Autor: $autor</h3>
+        <h2 class='autor'>Autor: $autor</h2>
         <p class='markdownParagraph'>$contenido</p>
         <img src=\"$imagenGenerada\">
     </section>
