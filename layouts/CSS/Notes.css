@@ -1,25 +1,31 @@
+@font-face {
+        font-family: "Regular";
+    src:
+        url("/public/FONTS/Dosis-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Bold";
+    src:
+        url("/public/FONTS/Dosis-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
 .wordarchive {
-    padding-top: 12dvh;
-    min-height: calc(100vh - 2.2em);
-    padding-bottom: 4dvh;
-    align-content: start;
-}
-
-.wordarchive p {
-    font-size: 30px;
-    margin-bottom: 60px;
-    width: 70svw;
-    text-align: start;
-    max-width: 900px;
-}
-
-.wordarchive p br::before {
-    content: "↵";
-    display: block; 
-    position: absolute;
-    top: -1em;
-    right: 0;
-    font-size: 0.8em;
+  min-height: calc(100dvh - 2.2em);
+  padding: 12dvh 1rem 4dvh 1rem;
+  margin: auto;
+  display: flex;
+  align-content: start;
+  flex-direction: column;
+  width: 100%;
+  max-width: 80rem;
+  background: rgba(45, 5, 71, 0.1);
 }
 
 .wordarchive h1,h2,h3,h4,i,b,strike,pre {
@@ -32,19 +38,43 @@
     padding: 0;
 }
 
+.wordarchive p {
+    font-size: clamp(1.2rem, 6vw, 1.8rem);
+    margin-bottom: 60px;
+    width: 70svw;
+    text-align: start;
+    max-width: 900px;
+    font-family: "Regular";
+    text-wrap: balance;
+}
+
+.wordarchive p b {
+    font-family: "Bold";
+}
+
+.wordarchive p br::before {
+    content: "↵";
+    display: block; 
+    position: absolute;
+    top: -1em;
+    right: 0;
+    font-size: 0.8em;
+}
+
 .wordarchive h1 {
-    font-size: clamp(100% - 20px, 9.5vw, 60px);
-    line-height: clamp(100% - 10px, 9.5vw, 70px);
+  font-size: clamp(2.2rem, 6vw, 5rem);
+  line-height: clamp(3rem, 8vw, 6rem);
+  text-align: center;
 }
 
 .wordarchive h2 {
-    font-size: clamp(100% - 20px, 9.5vw, 40px);
-    line-height: clamp(100% - 10px, 9.5vw, 50px);
+  font-size: clamp(1.6rem, 6vw, 2.6rem);
+  line-height: clamp(2.2rem, 6vw, 3rem);
 }
 
-.wordarchive .h3__autor {
-    font-size: clamp(100% - 20px, 9.5vw, 36px);
-    line-height: clamp(100% - 10px, 9.5vw, 46px);
+.wordarchive .autor {
+    font-size: clamp(1.8rem, 6vw, 3rem);
+    line-height: clamp(2.6rem, 6vw, 3.4rem);
     font-style: italic;
     margin-bottom: 20px;
 }
@@ -60,6 +90,10 @@ pre {
 }
 
 @media (max-width: 800px) {
+    .wordarchive {
+        padding: 1rem 1rem 4dvh 1rem;
+    }
+
     .wordarchive p {
         width: 96dvw;
     }

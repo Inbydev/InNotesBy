@@ -364,7 +364,7 @@ form {
 }
 
 .formsection {
-  min-height: 100dvh;
+  min-height: 60dvh;
   display: flex;
   flex-direction: column;
   align-content: center;

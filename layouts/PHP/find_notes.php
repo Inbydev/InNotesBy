@@ -95,11 +95,11 @@ HTML;
             contextMenu.offsetHeight; // Triggers reflow
 
             // Calcular la posición del menú en relación con el ratón
-            var mouseX = event.clientX;
-            var mouseY = event.clientY;
+            var mouseX = event.clientX + window.scrollX;
+            var mouseY = event.clientY + window.scrollY;
 
             contextMenu.style.left = mouseX + 10 + 'px';
-            contextMenu.style.top = mouseY - 30 + 'px';
+            contextMenu.style.top = mouseY - 540 + 'px';
 
             // Aplicar la animación después de un pequeño retraso
             setTimeout(function () {

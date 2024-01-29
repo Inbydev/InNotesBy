@@ -9,7 +9,7 @@ head($title, $description, $othercss);
 
     <section class='wordarchive detector'>
         <h1>Testeo de Markdown</h1>
-        <h3 class='h3__autor'>Autor: Infisito</h3>
+        <h2 class='autor'>Autor: Infisito</h2>
         <p class='markdownParagraph'>#Esto será un testeo del Markdown, básicamente, de las diferentes tipos de formatos de texto#<br />
 <br />
 _itálica_<br />

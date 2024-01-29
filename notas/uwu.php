@@ -10,7 +10,7 @@ head($title, $description, $othercss);
 
     <section class='wordarchive detector'>
         <h1>El mejor</h1>
-        <h3 class='h3__autor'>Autor: ay</h3>
+        <h2 class='autor'>Autor: ay</h2>
         <p class='markdownParagraph'>**Contenido** _--+18--_</p>
     </section>
 

@@ -10,7 +10,7 @@ head($title, $description, $othercss);
 
     <section class='wordarchive detector'>
         <h1>em, rem y sus funcionalidades</h1>
-        <h3 class='h3__autor'>Autor: Infisito</h3>
+        <h2 class='autor'>Autor: Infisito</h2>
         <p class='markdownParagraph'>**EM** y **REM** son dos unidades CSS relativas al **font-size existente de cada elemento** [elemento padre o la etiqueta html, respectivamente], las diferencias de ambas son como funcionan y casos de uso.<br />
 <br />
 #EM#<br />

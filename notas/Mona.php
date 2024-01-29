@@ -10,7 +10,7 @@ head($title, $description, $othercss);
 
     <section class='wordarchive detector'>
         <h1>corea</h1>
-        <h3 class='h3__autor'>Autor: Mona</h3>
+        <h2 class='autor'>Autor: Mona</h2>
         <p class='markdownParagraph'>_los_<br />
 **coreanos**<br />
 --son--<br />

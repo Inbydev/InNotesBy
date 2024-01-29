@@ -10,7 +10,7 @@ head($title, $description, $othercss);
 
     <section class='wordarchive detector'>
         <h1>Me parece que los títulos queda chicos</h1>
-        <h3 class='h3__autor'>Autor: Darío</h3>
+        <h2 class='autor'>Autor: Darío</h2>
         <p class='markdownParagraph'>**Está simpática la muestra de uso de markdown**<br />
 </p>
         <img src=""> 
