@@ -8,9 +8,9 @@ head($title, $description, $othercss);
 ?>
     <?php require('../layouts/PHP/header-notes.php') ?>
 
-    <section class='wordarchive detector'>
+    <section class='wordarchive'>
         <h1>em, rem y sus funcionalidades</h1>
-        <h2 class='autor'>Autor: Infisito</h2>
+        <h2 class='autor'>By: Infisito</h2>
         <p class='markdownParagraph'>**EM** y **REM** son dos unidades CSS relativas al **font-size existente de cada elemento** [elemento padre o la etiqueta html, respectivamente], las diferencias de ambas son como funcionan y casos de uso.<br />
 <br />
 #EM#<br />

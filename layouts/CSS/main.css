@@ -336,9 +336,10 @@ header
     .header__items
     .header__link
     .header__logo:hover {
-    background-position-x: -166px;
-    cursor: pointer;
+        background-position-x: -401px;
+        cursor: pointer;
 }
+
 .header__mobile__container {
     z-index: 4;
     display: none;

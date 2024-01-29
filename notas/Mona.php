@@ -8,9 +8,9 @@ head($title, $description, $othercss);
 
     <?php require('../layouts/PHP/header-notes.php') ?>
 
-    <section class='wordarchive detector'>
+    <section class='wordarchive'>
         <h1>corea</h1>
-        <h2 class='autor'>Autor: Mona</h2>
+        <h2 class='autor'>By: Mona</h2>
         <p class='markdownParagraph'>_los_<br />
 **coreanos**<br />
 --son--<br />

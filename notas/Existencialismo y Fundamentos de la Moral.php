@@ -8,9 +8,9 @@ head($title, $description, $othercss);
 
     <?php require('../layouts/PHP/header-notes.php') ?>
 
-    <section class='wordarchive detector'>
+    <section class='wordarchive'>
         <h1>Existencialismo y Fundamentos de la Moral</h1>
-        <h2 class='autor'>Autor: Infisito</h2>
+        <h2 class='autor'>By: Infisito</h2>
         <p class='markdownParagraph'>#Existencialismo#<br />
 <br />
 _"Soy libre con un grado de responsabilidad"_, se comienza a ver esta filosofía de una manera pesimista; _"Uno también se hace responsable de las acciones de los demás"._ Porque toda acción sirve como ejemplo para los demás.<br />

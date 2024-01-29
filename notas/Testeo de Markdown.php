@@ -7,10 +7,11 @@ head($title, $description, $othercss);
 ?>
     <?php require('../layouts/PHP/header-notes.php') ?>
 
-    <section class='wordarchive detector'>
+    <section class='wordarchive'>
         <h1>Testeo de Markdown</h1>
-        <h2 class='autor'>Autor: Infisito</h2>
-        <p class='markdownParagraph'>#Esto será un testeo del Markdown, básicamente, de las diferentes tipos de formatos de texto#<br />
+        <h2 class='autor'>By: Infisito</h2>
+        <p class='markdownParagraph'>#Esto será un testeo del Markdown#<br />
+básicamente, de las diferentes tipos de formatos de texto<br />
 <br />
 _itálica_<br />
 <br />
@@ -21,11 +22,8 @@ _itálica_<br />
 ```bloque de código```<br />
 <br />
 #titulo 2#<br />
-<br />
 ##titulo 3##<br />
-<br />
 ###titulo 4###<br />
-<br />
 PRONTO SE VIENE MUCHO MAAAAS</p>
         <img src="../../notas/images/64cc786790acf_Nerdy Boy 2_0.jpg">
     </section>

@@ -1,5 +1,5 @@
 <?php
-function head($title, $description, $othercss = null, $headerjs = null) {
+function head($title, $description, $othercss = null, $headerjs = null, $otherjs = null) {
 	echo <<<HTML
 <!DOCTYPE html>
 <html lang="es">
@@ -19,7 +19,8 @@ function head($title, $description, $othercss = null, $headerjs = null) {
 	<link rel="stylesheet" href="/layouts/CSS/main.css">
 	<link rel="stylesheet" href="/layouts/CSS/InNotesBy.css">
 	$othercss
-	<script defer src="/layouts/JS/app.js"></script>
+	$headerjs
+	$otherjs
 	<script defer src="/layouts/JS/header__mobile.js"></script>
 </head>
 

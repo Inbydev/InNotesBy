@@ -37,6 +37,10 @@
 .header__logo {
     padding: 0;
 }
+.wordarchive pre {
+    width: 70svw;
+    max-width: 600px;
+}
 
 .wordarchive p {
     font-size: clamp(1.2rem, 6vw, 1.8rem);
@@ -65,18 +69,33 @@
   font-size: clamp(2.2rem, 6vw, 5rem);
   line-height: clamp(3rem, 8vw, 6rem);
   text-align: center;
+  margin: 0;
 }
 
 .wordarchive h2 {
-  font-size: clamp(1.6rem, 6vw, 2.6rem);
-  line-height: clamp(2.2rem, 6vw, 3rem);
+  font-size: clamp(1.8rem, 6vw, 3.4rem);
+  line-height: clamp(2.4rem, 6vw, 4.2rem);
+  margin: 0;
+}
+
+.wordarchive h3 {
+    font-size: clamp(1.6rem, 6vw, 3.2rem);
+    line-height: clamp(2.2rem, 6vw, 4rem);
+    margin: 0;
+}
+
+  .wordarchive h4 {
+    font-size: clamp(1.4rem, 6vw, 3rem);
+    line-height: clamp(2rem, 6vw, 3.8rem);
+    margin: 0;
 }
 
 .wordarchive .autor {
-    font-size: clamp(1.8rem, 6vw, 3rem);
-    line-height: clamp(2.6rem, 6vw, 3.4rem);
+    font-size: clamp(1.6rem, 6vw, 2.6rem);
+    line-height: clamp(2.6rem, 6vw, 3.2rem);
     font-style: italic;
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
+    font-family: "Bold";
 }
 
 .wordarchive img {
@@ -84,17 +103,13 @@
     max-width: 600px;
 }
 
-pre {
-    width: 56svw;
-    max-width: 720px;
-}
-
 @media (max-width: 800px) {
     .wordarchive {
         padding: 1rem 1rem 4dvh 1rem;
     }
 
-    .wordarchive p {
+    .wordarchive p,
+    .wordarchive pre {
         width: 96dvw;
     }
 }

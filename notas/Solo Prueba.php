@@ -8,9 +8,9 @@ head($title, $description, $othercss);
 
     <?php require('../layouts/PHP/header-notes.php') ?>
 
-    <section class='wordarchive detector'>
+    <section class='wordarchive'>
         <h1>Me parece que los títulos queda chicos</h1>
-        <h2 class='autor'>Autor: Darío</h2>
+        <h2 class='autor'>By: Darío</h2>
         <p class='markdownParagraph'>**Está simpática la muestra de uso de markdown**<br />
 </p>
         <img src=""> 
