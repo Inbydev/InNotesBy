@@ -28,6 +28,10 @@
     text-align: start;
 }
 
+.header__logo {
+    padding: 0;
+}
+
 .wordarchive h1 {
     font-size: clamp(100% - 20px, 9.5vw, 60px);
     line-height: clamp(100% - 10px, 9.5vw, 70px);

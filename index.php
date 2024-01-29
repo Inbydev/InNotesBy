@@ -17,12 +17,12 @@ head($title, $description, $headerjs);
 	<section class="formsection detector" id="create">
         <button class="create__page__button" onclick="popup.showModal()">Crear Nota</button>
         
-        <?php require('layouts/PHP/find-archives.php') ?>
+        <?php require('layouts/PHP/find_notes.php') ?>
 	</section>
 
-	
+    
 	<dialog id="popup">
-        <form action="layouts/PHP/crear_archivo.php" id="form__create__page" method="POST" enctype="multipart/form-data">
+        <form action="layouts/PHP/create_note.php" id="form__create__page" method="POST" enctype="multipart/form-data">
             <nav class="text__edit">
                 <a class="text__edit__button" href="#0">Datos de la nota</a>
                 <a class="text__edit__button" href="#1">Edición de contenido</a>
