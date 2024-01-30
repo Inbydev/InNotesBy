@@ -1,5 +1,7 @@
 # Create Notes for public access with InNotesBy
 
+![imagen](https://github.com/Inbydev/InNotesBy/assets/139036190/62c35cf7-9ae4-4c40-8d0d-b20b04b3c895)
+
 ## About the project
 
 InNotesBy is a website primarily built with PHP that allows users to create public notes. With InNotesBy, you can creat notes with titles, author, and content. The content section provides a interface with buttons for Markdown formatting, and soon, real Markdown support will be integrated.
