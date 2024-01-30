@@ -6,7 +6,7 @@
 
 InNotesBy is a website primarily built with PHP that allows users to create public notes. With InNotesBy, you can creat notes with titles, author, and content. The content section provides a interface with buttons for Markdown formatting, and soon, real Markdown support will be integrated.
 
-You can create notes with H2, H3, H4 headings, bold, italics, strikethrough, code blocks, and upload an image with format PNG, JPG, or WebP. InNotesBy automatically converts uploaded images to WebP format with an image quality of 80 out of 100, resulting in 20% image compression. Images exceeding 1080p resolution are automatically downscaled to 1080p. Additionally, images larger than 8MB ignored during the upload process.
+You can create notes with H2, H3, H4 headings, bold, italics, strikethrough, code blocks, and upload an image with format PNG, JPG, or WebP. InNotesBy automatically converts uploaded images to WebP format with 20% of image compression. Images exceeding 1080p resolution are automatically downscaled to 1080p. Additionally, images larger than 8MB ignored during the upload process.
 
 Check the features of the future by checking out the 'Projects' section on this GitHub repository.
 
