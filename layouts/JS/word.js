@@ -1,3 +1,15 @@
+var tx = document.getElementsByClassName('form__textarea');
+
+for (var i = 0; i < tx.length; i++) {
+  tx[i].setAttribute('style', 'height:' + (tx[i].scrollHeight) + 'px; overflow-y:hidden;');
+  tx[i].addEventListener("input", OnInput, false);
+}
+
+function OnInput(e) {
+  this.style.height = 'auto';
+  this.style.height = (this.scrollHeight) + 'px';
+}
+
 const textarea = document.getElementById("contenido");
 const btnItalic = document.getElementById("btnItalic");
 const btnBold = document.getElementById("btnBold");
@@ -191,3 +203,12 @@ background__boton__select.forEach((background__boton, index) => {
         });
     });
 });
+
+
+function bodyHidden() {
+  document.body.classList.add('hidden');
+}
+
+function bodyNoHidden() {
+  document.body.classList.remove('hidden');
+}

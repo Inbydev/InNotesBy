@@ -40,7 +40,6 @@ img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhos
     --background-3: rgb(89, 58, 104);
     --background-header: rgb(18, 0, 28);
     --other: #c9aacd;
-    --color: #5757577e;
 
     --light-hover: #ff94c8;
     --dark-hover: #b35683;
@@ -261,7 +260,7 @@ section {
     transform: translateX(0);
 }
 
-header {
+.header {
     filter: blur(5px);
     transform: translateY(-11dvh);
     width: 100%;
@@ -275,7 +274,7 @@ header {
     transition: all var(--h-s);
 }
 
-header
+.header
     .header__box {
     height: 11dvh;
     gap: 4em;
@@ -285,12 +284,12 @@ header
     overflow: hidden;
     list-style: none;
 }
-header
+.header
     .header__box
     .header__items {
     max-height: 94%;
 }
-header
+.header
     .header__box
     .header__items
     .header__link {
@@ -300,14 +299,14 @@ header
     transition: 0.2s ease;
     cursor: default;
 }
-header
+.header
     .header__box
     .header__items
     .header__link
     .icon__header {
     transition: 0.2s ease;
 }
-header
+.abajo
     .header__box
     .header__items
     .header__link
@@ -316,7 +315,7 @@ header
     cursor: pointer;
 }
 
-header
+.header
     .header__box
     .header__items
     .header__link
@@ -331,7 +330,7 @@ header
     transition: background 0.2s ease;
 }
 
-header
+.header
     .header__box
     .header__items
     .header__link
@@ -526,7 +525,7 @@ section[id] {
         display: flex;
     }
 
-    header,
+    .header,
     .header__box {
         display: none;
     }

@@ -1,4 +1,4 @@
-<header>
+<header class="header">
 	<nav>
 		<ul class="header__box">
 			<li class="header__items"><a class="header__link" href="/"><ion-icon class="icon__header" name="arrow-back-circle-outline"></a></li>

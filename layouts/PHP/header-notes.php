@@ -1,4 +1,4 @@
-<header class="abajo">
+<header class="header abajo">
 	<ul class="header__box">
 		<li class="header__items"><a class="header__link" href="/"><ion-icon class="icon__header" name="arrow-back-circle-outline"></a></li>
 		<li class="header__items"><a class="header__link" href="/"><h2 class="header__logo">InNotesBy</h2></a></li>
