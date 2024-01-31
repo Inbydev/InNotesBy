@@ -11,11 +11,6 @@ You can create notes with H2, H3, H4 headings, bold, italics, strikethrough, cod
 Check the features of the future by checking out the 'Projects' section on this GitHub repository.
 
 
-## Warning: Inappropriate Content Policy
-
-Please be advised that any inappropriate content, material intended for mature audiences (18+), or attempts to compromise the integrity of InNotesBy will be promptly removed and/or subject to analysis for the continuous improvement of InNotesBy.
-
-
 ## Contributing
 
 To contribute to this project, you can:
@@ -24,6 +19,11 @@ To contribute to this project, you can:
 - Submit a Pull Request
 
 Your contributions and efforts to improve InNotesBy are very appreciated!
+
+
+## Warning: Inappropriate Content Policy
+
+Please be advised that any inappropriate content, material intended for mature audiences (18+), or attempts to compromise the integrity of InNotesBy will be promptly removed and/or subject to analysis for the continuous improvement of InNotesBy.
 
 
 ## License
