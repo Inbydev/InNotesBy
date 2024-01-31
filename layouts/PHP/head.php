@@ -17,7 +17,6 @@ function head($title, $description, $othercss = null, $headerjs = null, $otherjs
 	<link rel="icon" href="/Images/icono.ico">
 	<title>$title</title>
 	<link rel="stylesheet" href="/layouts/CSS/main.css">
-	<link rel="stylesheet" href="/layouts/CSS/InNotesBy.css">
 	$othercss
 	$headerjs
 	$otherjs

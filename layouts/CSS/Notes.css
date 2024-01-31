@@ -1,3 +1,21 @@
+@font-face {
+    font-family: "Regular";
+  src:
+    url("/public/FONTS/Dosis-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+  
+  @font-face {
+  font-family: "Bold";
+  src:
+    url("/public/FONTS/Dosis-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
 .wordarchive {
   min-height: calc(100dvh - 2.2em);
   padding: 12dvh 1rem 4dvh 1rem;

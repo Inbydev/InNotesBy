@@ -4,7 +4,8 @@ $title = 'InNotesBy ❤';
 $description = 'Proyecto de Inbydev para crear Notas!';
 $headerjs = '<script defer src="/layouts/JS/header__notes.js"></script>';
 $otherjs = '<script defer src="/layouts/JS/app.js"></script>';
-head($title, $description, $headerjs, $otherjs);
+$othercss = '<link rel="stylesheet" href="/layouts/CSS/InNotesBy.css">';
+head($title, $description, $headerjs, $otherjs, $othercss);
 ?>
 	<?php require('layouts/PHP/header.php') ?>
 
@@ -103,7 +104,7 @@ head($title, $description, $headerjs, $otherjs);
 
         <h3 class="two">Recuerda!</h3>
 
-        <p>Ni el <span>nombre de la nota</span>, <span>título</span> o <span>autor</span> puede contener <span>"<"</span> o <span>">"</span>!</p>
+        <p>El <span>nombre de la nota</span> no puede contener <span>carácteres especiales</span>!</p>
 
         <h3 class="not">¡Ya sabiendo esto, estás preparado para crear tu nota en <span>InNotesBy</span>!</h3>
     </section>

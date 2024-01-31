@@ -85,6 +85,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     else {
         $contenido = htmlspecialchars($contenido);
+        $nombreArchivo = htmlspecialchars($nombreArchivo);
+        $titulo = htmlspecialchars($titulo);
+        $autor = htmlspecialchars($autor);
         $contenido = nl2br($contenido);
 
         $contenidoArchivo = "<?php
