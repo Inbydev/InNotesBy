@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($cantidadArchivos >= 200) {
         echo '<script>
             alert("Se alcanzó el límite máximo de 200 notas en InNotesBy. Contacte a Inbydev para resolver este problema.");
-            window.location.href = "<?php echo $base_url; ?>index.php";
+            window.location.href = "../../index.php";
         </script>';
         exit;
     }
@@ -75,10 +75,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     $rutaArchivo = '../../notas/' . $nombreArchivo . '.php';
+    
     if (file_exists($rutaArchivo)) {
         echo '<script>
             alert("El nombre de la nota \'' . $nombreArchivo . '\' ya existe. Por favor, elige otro nombre.");
-            window.location.href = "<?php echo $base_url; ?>index.php";
+            window.location.href = "../../index.php";
         </script>';
         exit;
     }
