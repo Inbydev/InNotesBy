@@ -187,6 +187,23 @@ form {
   border-radius: 6px;
 }
 
+.preview__button {
+  border: none;
+  padding: 0 .4rem;
+  height: 2rem;
+  color: #FFFFFF;
+  background: rgba(66, 23, 95, 0.6);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: "Concert One";
+  transition: var(--f-h-s);
+}
+
+.preview__button:hover {
+  background: #FFFFFF;
+  color: rgba(66, 23, 95, 0.6);
+}
+
 .close__and__send__button,
 .close__and__send__button svg path {
   transition: var(--f-h-s);
@@ -273,7 +290,7 @@ form {
 
 
 .form__section {
-  min-height: calc(100dvh - 2.2em);
+  min-height: 100dvh;
   padding: 12dvh 1rem 4dvh 1rem;
   margin: auto;
   display: flex;
@@ -282,6 +299,7 @@ form {
   width: 100%;
   max-width: 80rem;
   background: rgba(45, 5, 71, 0.1);
+  flex-shrink: 0;
 }
 
 .form__section .form__section__title {
@@ -328,9 +346,104 @@ form {
   outline: none;
   border-bottom: 1px solid var(--primary-text);
 }
+ 
+#vistaPreviaContainer h2, h3, h4, i, b, strike, pre {
+  position: static;
+  padding: 20px 0;
+  text-align: start;
+}
 
+#vistaPreviaContainer .markdownParagraph {
+  margin-bottom: 60px;
+  width: 70svw;
+  text-align: start;
+  max-width: 900px;
+  font-family: "Regular";
+  color: var(--primary-text);
+}
 
+#vistaPreviaContainer .markdownParagraph span,
+#vistaPreviaContainer .markdownParagraph b,
+#vistaPreviaContainer .markdownParagraph i,
+#vistaPreviaContainer .markdownParagraph strike,
+#vistaPreviaContainer .markdownParagraph h2,
+#vistaPreviaContainer .markdownParagraph h3,
+#vistaPreviaContainer .markdownParagraph h4 {
+  width: 100%;
+  text-wrap: balance;
+}
 
+#vistaPreviaContainer .markdownParagraph span {
+  font-size: clamp(1.2rem, 6vw, 1.8rem);
+  text-wrap: balance;
+  text-align: start;
+  font-family: "Regular";
+  color: var(--primary-text);
+}
+
+#vistaPreviaContainer .markdownParagraph b {
+  font-family: "Bold";
+}
+
+#vistaPreviaContainer .markdownParagraph code span,
+#vistaPreviaContainer .markdownParagraph pre {
+    background: 0 0;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    font-size: 1rem;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+#vistaPreviaContainer .markdownParagraph pre {
+    width: 70svw;
+    max-width: 500px;
+    padding: 1rem;
+    margin: 2.5rem auto;
+    overflow: auto;
+    border-radius: 0.3rem;
+    border: 2px solid rgba(241, 215, 253, .8);
+}
+
+#vistaPreviaContainer .markdownParagraph :not(pre) > code span,
+#vistaPreviaContainer .markdownParagraph pre {
+    background: rgba(0, 0, 0, .4);
+}
+
+#vistaPreviaContainer .markdownParagraph :not(pre) > code span {
+    padding: 0.1em;
+    border-radius: 0.3em;
+    white-space: normal;
+}
+
+#vistaPreviaContainer .markdownParagraph h2 {
+  font-size: clamp(1.8rem, 6vw, 3.4rem);
+  line-height: clamp(2.4rem, 6vw, 4.2rem);
+  margin: 0;
+}
+
+#vistaPreviaContainer .markdownParagraph h3 {
+  font-size: clamp(1.6rem, 6vw, 3.2rem);
+  line-height: clamp(2.2rem, 6vw, 4rem);
+  margin: 0;
+}
+
+#vistaPreviaContainer .markdownParagraph h4 {
+  font-size: clamp(1.4rem, 6vw, 3rem);
+  line-height: clamp(2rem, 6vw, 3.8rem);
+  margin: 0;
+}
 
 
 .notes__section {
@@ -458,6 +571,7 @@ display: -webkit-box;
 -webkit-line-clamp: 2;
 -webkit-box-orient: vertical;
 max-width: 100%;
+text-align: center;
 }
 
 .notas__container .no-notas {
@@ -557,5 +671,11 @@ background-clip: text;
   
   .text__edit {
       gap: 1em;
+  }
+}
+
+@media (max-width: 800px) {
+  #vistaPreviaContainer .markdownParagraph, #vistaPreviaContainer .markdownParagraph pre {
+    width: 96dvw;
   }
 }

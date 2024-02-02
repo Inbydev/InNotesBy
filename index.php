@@ -10,7 +10,6 @@ head($title, $description, $headerjs, $otherjs, $othercss);
 ?>
 	<?php require('layouts/PHP/header.php') ?>
 
-
 	<section class="home" id="home">
         <h1>InNotesBy</h1>
         <h2>Crea tu <span>nota!</span></h2>
@@ -39,6 +38,8 @@ head($title, $description, $headerjs, $otherjs, $othercss);
                         <input type="text" class="form__input" placeholder="Nombre de la nota:" name="nombre_archivo" id="nombre_archivo" required>
                     </div>
                     <div class="close__and__send__container">
+                        <button class="preview__button" id="btnPreview" type="button">Vista Previa</button>
+
                         <label class="close__and__send__button">
                             <input type="submit" id="CreatePage" onclick="crearArchivo()">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11.5003 12H5.41872M5.24634 12.7972L4.24158 15.7986C3.69128 17.4424 3.41613 18.2643 3.61359 18.7704C3.78506 19.21 4.15335 19.5432 4.6078 19.6701C5.13111 19.8161 5.92151 19.4604 7.50231 18.7491L17.6367 14.1886C19.1797 13.4942 19.9512 13.1471 20.1896 12.6648C20.3968 12.2458 20.3968 11.7541 20.1896 11.3351C19.9512 10.8529 19.1797 10.5057 17.6367 9.81135L7.48483 5.24303C5.90879 4.53382 5.12078 4.17921 4.59799 4.32468C4.14397 4.45101 3.77572 4.78336 3.60365 5.22209C3.40551 5.72728 3.67772 6.54741 4.22215 8.18767L5.24829 11.2793C5.34179 11.561 5.38855 11.7019 5.407 11.8459C5.42338 11.9738 5.42321 12.1032 5.40651 12.231C5.38768 12.375 5.34057 12.5157 5.24634 12.7972Z" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
@@ -70,6 +71,9 @@ head($title, $description, $headerjs, $otherjs, $othercss);
                 <input type="text" class="form__section__input form__section__title" placeholder="Título:" name="titulo" required>
                 <input type="text" class="form__section__input form__section__author" placeholder="Autor:" name="autor" required>
                 <textarea type="text" class="form__textarea" placeholder="Contenido:" name="contenido" id="contenido" required></textarea>
+                <div id="vistaPreviaContainer">
+                    <p class="markdownParagraph">
+                </div>
             </section>
 		</form>
 	</dialog>
@@ -132,5 +136,59 @@ head($title, $description, $headerjs, $otherjs, $othercss);
 	<script src="/layouts/JS/word.js"></script>
 	<script src="/layouts/JS/loader.js"></script>
     <script src="/layouts/JS/context__menu.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var modoPreview = false;
+            var paragraph = document.querySelector('.markdownParagraph');
+
+            function alternarModo() {
+                if (modoPreview) {
+                    volverAEscribir();
+                } else {
+                    mostrarVistaPrevia();
+                }
+
+                modoPreview = !modoPreview;
+            }
+
+            function mostrarVistaPrevia() {
+                var contenidoNota = document.getElementById("contenido").value;
+                document.getElementById("contenido").style.display = "none";
+
+                if (!paragraph) {
+                    paragraph = document.createElement("p");
+                    paragraph.className = "markdownParagraph";
+                    document.getElementById("vistaPreviaContainer").appendChild(paragraph);
+                }
+                
+                const convertedText = contenidoNota
+                    .replace(/_([^_]+)_/g, '<i>$1</i><br><br>')
+                    .replace(/\*\*([^*]+)\*\*/g, '<b>$1</b><br><br>')
+                    .replace(/--([^--]+)--/g, '<strike>$1</strike><br><br>')
+                    .replace(/```([^`]+)```/g, '<pre><code>$1</code></pre><br>')
+                    .replace(/###([^#]+)###/g, '<h4>$1</h4><br>')
+                    .replace(/##([^#]+)##/g, '<h3>$1</h3><br>')
+                    .replace(/#([^#\n]+)#/g, '<h2>$1</h2><br>')
+                    .replace(/([^_<>*#\n]+)(?:(?:(?!\n$)\n)|(?:(?![^<]*>|[^<>]*<\/)(?![^`]*`[^`]*`)))/g, '<span>$1</span><br><br>');
+
+
+                paragraph.innerHTML = convertedText;
+                document.getElementById("btnPreview").textContent = "Volver a escribir";
+            }
+
+            function volverAEscribir() {
+                document.getElementById("contenido").style.display = "block";
+
+                if (paragraph) {
+                    paragraph.remove();
+                    paragraph = null;
+                }
+
+                document.getElementById("btnPreview").textContent = "Vista previa";
+            }
+
+            document.getElementById("btnPreview").addEventListener("click", alternarModo);
+        });
+    </script>
 </body>
 </html>
