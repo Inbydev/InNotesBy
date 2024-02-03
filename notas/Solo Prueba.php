@@ -11,8 +11,8 @@ head($title, $description, $othercss);
     <section class='wordarchive'>
         <h1>Me parece que los títulos queda chicos</h1>
         <h2 class='autor'>By: Darío</h2>
-        <p class='markdownParagraph'>**Está simpática la muestra de uso de markdown**<br />
-</p>
+        <div class='markdown__container'>**Está simpática la muestra de uso de markdown**<br />
+</div>
         <img src=""> 
     </section>
 

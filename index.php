@@ -71,9 +71,7 @@ head($title, $description, $headerjs, $otherjs, $othercss);
                 <input type="text" class="form__section__input form__section__title" placeholder="Título:" name="titulo" required>
                 <input type="text" class="form__section__input form__section__author" placeholder="Autor:" name="autor" required>
                 <textarea type="text" class="form__textarea" placeholder="Contenido:" name="contenido" id="contenido" required></textarea>
-                <div id="vistaPreviaContainer">
-                    <p class="markdownParagraph">
-                </div>
+                <div id="vistaPreviaContainer"></div>
             </section>
 		</form>
 	</dialog>
@@ -136,59 +134,6 @@ head($title, $description, $headerjs, $otherjs, $othercss);
 	<script src="/layouts/JS/word.js"></script>
 	<script src="/layouts/JS/loader.js"></script>
     <script src="/layouts/JS/context__menu.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var modoPreview = false;
-            var paragraph = document.querySelector('.markdownParagraph');
-
-            function alternarModo() {
-                if (modoPreview) {
-                    volverAEscribir();
-                } else {
-                    mostrarVistaPrevia();
-                }
-
-                modoPreview = !modoPreview;
-            }
-
-            function mostrarVistaPrevia() {
-                var contenidoNota = document.getElementById("contenido").value;
-                document.getElementById("contenido").style.display = "none";
-
-                if (!paragraph) {
-                    paragraph = document.createElement("p");
-                    paragraph.className = "markdownParagraph";
-                    document.getElementById("vistaPreviaContainer").appendChild(paragraph);
-                }
-                
-                const convertedText = contenidoNota
-                    .replace(/_([^_]+)_/g, '<i>$1</i><br><br>')
-                    .replace(/\*\*([^*]+)\*\*/g, '<b>$1</b><br><br>')
-                    .replace(/--([^--]+)--/g, '<strike>$1</strike><br><br>')
-                    .replace(/```([^`]+)```/g, '<pre><code>$1</code></pre><br>')
-                    .replace(/###([^#]+)###/g, '<h4>$1</h4><br>')
-                    .replace(/##([^#]+)##/g, '<h3>$1</h3><br>')
-                    .replace(/#([^#\n]+)#/g, '<h2>$1</h2><br>')
-                    .replace(/([^_<>*#\n]+)(?:(?:(?!\n$)\n)|(?:(?![^<]*>|[^<>]*<\/)(?![^`]*`[^`]*`)))/g, '<span>$1</span><br><br>');
-
-
-                paragraph.innerHTML = convertedText;
-                document.getElementById("btnPreview").textContent = "Volver a escribir";
-            }
-
-            function volverAEscribir() {
-                document.getElementById("contenido").style.display = "block";
-
-                if (paragraph) {
-                    paragraph.remove();
-                    paragraph = null;
-                }
-
-                document.getElementById("btnPreview").textContent = "Vista previa";
-            }
-
-            document.getElementById("btnPreview").addEventListener("click", alternarModo);
-        });
-    </script>
+    <script src="/layouts/JS/preview__mode.js"></script>
 </body>
 </html>

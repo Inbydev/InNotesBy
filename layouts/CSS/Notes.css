@@ -28,7 +28,7 @@
   background: rgba(45, 5, 71, 0.1);
 }
 
-.wordarchive h1,h2,h3,h4,i,b,strike,pre {
+.wordarchive .markdown__container h1,h2,h3,h4,i,b,strike,pre,p {
     position: static;
     padding: 20px 0;
     text-align: start;
@@ -37,26 +37,68 @@
 .header__logo {
     padding: 0;
 }
-.wordarchive pre {
-    width: 70svw;
-    max-width: 600px;
-}
 
-.wordarchive p {
-    font-size: clamp(1.2rem, 6vw, 1.8rem);
+.wordarchive .markdown__container {
     margin-bottom: 60px;
     width: 70svw;
-    text-align: start;
     max-width: 900px;
+    text-align: start;
     font-family: "Regular";
     text-wrap: balance;
 }
 
-.wordarchive p b {
+.wordarchive .markdown__container p {
+  font-size: clamp(1.2rem, 6vw, 1.8rem);
+}
+
+.wordarchive .markdown__container code,
+.wordarchive .markdown__container pre {
+    background: 0 0;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    color: var(--primary-text);
+    font-size: 1rem;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+.wordarchive .markdown__container pre {
+    width: 70svw;
+    max-width: 500px;
+    padding: 1rem;
+    margin: 2.5rem auto;
+    overflow: auto;
+    border-radius: 0.3rem;
+    border: 2px solid rgba(241, 215, 253, .8);
+}
+
+.wordarchive .markdown__container :not(pre) > code,
+.wordarchive .markdown__container pre {
+    background: rgba(0, 0, 0, .4);
+}
+
+.wordarchive .markdown__container :not(pre) > code {
+    padding: 0.1em;
+    border-radius: 0.3em;
+    white-space: normal;
+}
+
+.wordarchive .markdown__container b {
     font-family: "Bold";
 }
 
-.wordarchive p br::before {
+.wordarchive .markdown__container br::before {
     content: "↵";
     display: block; 
     position: absolute;
@@ -72,30 +114,30 @@
   margin: 0;
 }
 
-.wordarchive h2 {
+.wordarchive .autor {
+  font-size: clamp(1.6rem, 6vw, 2.6rem);
+  line-height: clamp(2.6rem, 6vw, 3.2rem);
+  font-style: italic;
+  margin: 0 0 20px 0;
+  font-family: "Bold";
+}
+
+.wordarchive .markdown__container h2 {
   font-size: clamp(1.8rem, 6vw, 3.4rem);
   line-height: clamp(2.4rem, 6vw, 4.2rem);
   margin: 0;
 }
 
-.wordarchive h3 {
+.wordarchive .markdown__container h3 {
     font-size: clamp(1.6rem, 6vw, 3.2rem);
     line-height: clamp(2.2rem, 6vw, 4rem);
     margin: 0;
 }
 
-  .wordarchive h4 {
+.wordarchive .markdown__container h4 {
     font-size: clamp(1.4rem, 6vw, 3rem);
     line-height: clamp(2rem, 6vw, 3.8rem);
     margin: 0;
-}
-
-.wordarchive .autor {
-    font-size: clamp(1.6rem, 6vw, 2.6rem);
-    line-height: clamp(2.6rem, 6vw, 3.2rem);
-    font-style: italic;
-    margin: 0 0 20px 0;
-    font-family: "Bold";
 }
 
 .wordarchive img {
@@ -108,8 +150,7 @@
         padding: 1rem 1rem 4dvh 1rem;
     }
 
-    .wordarchive p,
-    .wordarchive pre {
+    .wordarchive .markdown__container {
         width: 96dvw;
     }
 }

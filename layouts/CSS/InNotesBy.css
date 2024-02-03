@@ -346,34 +346,34 @@ form {
   outline: none;
   border-bottom: 1px solid var(--primary-text);
 }
- 
-#vistaPreviaContainer h2, h3, h4, i, b, strike, pre {
+
+#vistaPreviaContainer {
+  margin-bottom: 60px;
+  width: 70svw;
+  max-width: 900px;
+  color: var(--primary-text);
+  font-family: "Regular";
+}
+
+#vistaPreviaContainer h2, h3, h4, i, b, strike, pre, p {
   position: static;
   padding: 20px 0;
   text-align: start;
 }
 
-#vistaPreviaContainer .markdownParagraph {
-  margin-bottom: 60px;
-  width: 70svw;
-  text-align: start;
-  max-width: 900px;
-  font-family: "Regular";
-  color: var(--primary-text);
-}
-
-#vistaPreviaContainer .markdownParagraph span,
-#vistaPreviaContainer .markdownParagraph b,
-#vistaPreviaContainer .markdownParagraph i,
-#vistaPreviaContainer .markdownParagraph strike,
-#vistaPreviaContainer .markdownParagraph h2,
-#vistaPreviaContainer .markdownParagraph h3,
-#vistaPreviaContainer .markdownParagraph h4 {
+#vistaPreviaContainer span,
+#vistaPreviaContainer b,
+#vistaPreviaContainer i,
+#vistaPreviaContainer strike,
+#vistaPreviaContainer h2,
+#vistaPreviaContainer h3,
+#vistaPreviaContainer h4,
+#vistaPreviaContainer p {
   width: 100%;
   text-wrap: balance;
 }
 
-#vistaPreviaContainer .markdownParagraph span {
+#vistaPreviaContainer span {
   font-size: clamp(1.2rem, 6vw, 1.8rem);
   text-wrap: balance;
   text-align: start;
@@ -381,12 +381,12 @@ form {
   color: var(--primary-text);
 }
 
-#vistaPreviaContainer .markdownParagraph b {
+#vistaPreviaContainer b {
   font-family: "Bold";
 }
 
-#vistaPreviaContainer .markdownParagraph code span,
-#vistaPreviaContainer .markdownParagraph pre {
+#vistaPreviaContainer code span,
+#vistaPreviaContainer pre {
     background: 0 0;
     text-shadow: 0 1px rgba(0, 0, 0, 0.3);
     font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
@@ -406,7 +406,7 @@ form {
     hyphens: none;
 }
 
-#vistaPreviaContainer .markdownParagraph pre {
+#vistaPreviaContainer pre {
     width: 70svw;
     max-width: 500px;
     padding: 1rem;
@@ -416,30 +416,30 @@ form {
     border: 2px solid rgba(241, 215, 253, .8);
 }
 
-#vistaPreviaContainer .markdownParagraph :not(pre) > code span,
-#vistaPreviaContainer .markdownParagraph pre {
+#vistaPreviaContainer :not(pre) > code span,
+#vistaPreviaContainer pre {
     background: rgba(0, 0, 0, .4);
 }
 
-#vistaPreviaContainer .markdownParagraph :not(pre) > code span {
+#vistaPreviaContainer :not(pre) > code span {
     padding: 0.1em;
     border-radius: 0.3em;
     white-space: normal;
 }
 
-#vistaPreviaContainer .markdownParagraph h2 {
+#vistaPreviaContainer h2 {
   font-size: clamp(1.8rem, 6vw, 3.4rem);
   line-height: clamp(2.4rem, 6vw, 4.2rem);
   margin: 0;
 }
 
-#vistaPreviaContainer .markdownParagraph h3 {
+#vistaPreviaContainer h3 {
   font-size: clamp(1.6rem, 6vw, 3.2rem);
   line-height: clamp(2.2rem, 6vw, 4rem);
   margin: 0;
 }
 
-#vistaPreviaContainer .markdownParagraph h4 {
+#vistaPreviaContainer h4 {
   font-size: clamp(1.4rem, 6vw, 3rem);
   line-height: clamp(2rem, 6vw, 3.8rem);
   margin: 0;
@@ -675,7 +675,7 @@ background-clip: text;
 }
 
 @media (max-width: 800px) {
-  #vistaPreviaContainer .markdownParagraph, #vistaPreviaContainer .markdownParagraph pre {
+  #vistaPreviaContainer, #vistaPreviaContainer pre {
     width: 96dvw;
   }
 }

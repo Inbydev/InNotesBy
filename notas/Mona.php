@@ -11,11 +11,11 @@ head($title, $description, $othercss);
     <section class='wordarchive'>
         <h1>corea</h1>
         <h2 class='autor'>By: Mona</h2>
-        <p class='markdownParagraph'>_los_<br />
+        <div class='markdown__container'>_los_<br />
 **coreanos**<br />
 --son--<br />
 #muy#<br />
-##lindos##</p>
+##lindos##</div>
         <img src="/notas/images/64d2ff295c8bc_DRUY7SWCC5GMTDX32MFC3APNX4.jpg"> 
     </section>
 

@@ -2,8 +2,7 @@
 require('../layouts/PHP/head.php');
 $title = 'InNotesBy ❤ - em, rem y sus funcionalidades';
 $description = 'Proyecto de Inbydev para crear Notas!';
-$othercss = '<link rel="stylesheet" href="/layouts/CSS/Notes.css">
-<link href="../layouts/CSS/prism.css" rel="stylesheet"/>';
+$othercss = '<link rel="stylesheet" href="/layouts/CSS/Notes.css">';
 head($title, $description, $othercss);
 ?>
     <?php require('../layouts/PHP/header-notes.php') ?>
@@ -11,7 +10,7 @@ head($title, $description, $othercss);
     <section class='wordarchive'>
         <h1>em, rem y sus funcionalidades</h1>
         <h2 class='autor'>By: Infisito</h2>
-        <p class='markdownParagraph'>**EM** y **REM** son dos unidades CSS relativas al **font-size existente de cada elemento** [elemento padre o la etiqueta html, respectivamente], las diferencias de ambas son como funcionan y casos de uso.<br />
+        <div class='markdown__container'>**EM** y **REM** son dos unidades CSS relativas al **font-size existente de cada elemento** [elemento padre o la etiqueta html, respectivamente], las diferencias de ambas son como funcionan y casos de uso.<br />
 <br />
 #EM#<br />
 <br />
@@ -85,7 +84,7 @@ header {
 </pre>
 <p class='markdownParagraph'>
 <br />
-lo que pasara será que el width del header será **2 veces el tamaño del font-size del html**, en este caso 16 píxeles, teniendo un width de 32 píxeles.</p>
+lo que pasara será que el width del header será **2 veces el tamaño del font-size del html**, en este caso 16 píxeles, teniendo un width de 32 píxeles.</div>
         <img src=""> 
     </section>
 

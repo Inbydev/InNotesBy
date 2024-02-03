@@ -103,7 +103,7 @@ head(\$title, \$description, \$othercss);
     <section class='wordarchive'>
         <h1>$titulo</h1>
         <h2 class='autor'>Autor: $autor</h2>
-        <p class='markdownParagraph'>$contenido</p>
+        <div class='markdown__container'>$contenido</div>
         <img src=\"$imagenGenerada\">
     </section>
 
