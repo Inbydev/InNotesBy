@@ -89,7 +89,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $nombreArchivo = htmlspecialchars($nombreArchivo);
         $titulo = htmlspecialchars($titulo);
         $autor = htmlspecialchars($autor);
-        $contenido = nl2br($contenido);
 
         $contenidoArchivo = "<?php
 require('../layouts/PHP/head.php');
@@ -103,7 +102,9 @@ head(\$title, \$description, \$othercss);
     <section class='wordarchive'>
         <h1>$titulo</h1>
         <h2 class='autor'>Autor: $autor</h2>
-        <div class='markdown__container'>$contenido</div>
+        <p class='markdown__container'>
+$contenido
+</p>
         <img src=\"$imagenGenerada\">
     </section>
 

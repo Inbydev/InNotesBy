@@ -6,9 +6,15 @@ for (var i = 0; i < tx.length; i++) {
 }
 
 function OnInput(e) {
+  var scrollLeft = window.pageXOffset || (document.documentElement || document.body.parentNode || document.body).scrollLeft;
+  var scrollTop  = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
+
   this.style.height = 'auto';
   this.style.height = (this.scrollHeight) + 'px';
+
+  window.scrollTo(scrollLeft, scrollTop);
 }
+
 
 const textarea = document.getElementById("contenido");
 const btnItalic = document.getElementById("btnItalic");

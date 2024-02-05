@@ -11,7 +11,7 @@ head($title, $description, $othercss);
     <section class='wordarchive'>
         <h1>El mejor</h1>
         <h2 class='autor'>By: Aliceki</h2>
-        <div class='markdown__container'>**Contenido** _--+18--_</div>
+        <p class='markdown__container'>**Contenido** _--+18--_</p>
     </section>
 
     <?php require('../layouts/PHP/scripts.php') ?>

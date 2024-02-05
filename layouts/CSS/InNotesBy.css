@@ -70,6 +70,8 @@ h2 span:nth-child(1) {
   background-clip: text;
   color: transparent;
   display: inline-table;
+  text-align: center;
+  text-wrap: balance;
 }
 
 .guide ul {
@@ -237,7 +239,7 @@ form {
   display: none;
 }
 
-.form__group__button__hover {
+.markdown__navigation button {
   border: none;
   border-radius: 6px;
   background: rgba(66, 23, 95, 0.6);
@@ -251,16 +253,16 @@ form {
   align-items: center;
 }
 
-.form__group__button__hover svg {
+.markdown__navigation button svg {
   min-width: 2.4rem;
 }
 
-.form__group__button__hover svg,
-.form__group__button__hover svg path {
+.markdown__navigation button svg,
+.markdown__navigation button svg path {
   transition: var(--f-h-s);
 }
 
-.markdown__navigation .form__group__button__hover:hover {
+.markdown__navigation button:hover {
   background: #FFFFFF;
 }
 
@@ -311,14 +313,38 @@ form {
   padding: 20px 0;
 }
 
-.form__section .form__section__author {
+.form__section label .form__section__author,
+.form__section label span {
   font-size: clamp(1.6rem, 6vw, 2.6rem);
   line-height: clamp(2.6rem, 6vw, 3.2rem);
-  text-align: center;
+  text-align: start;
   font-style: italic;
-  margin: 0 0 20px 0;
   font-family: "Bold";
+  max-width: 26rem;
+  padding: 0;
+  margin: 0;
+}
+
+
+.form__section label input {
+  left: clamp(2.6rem, 8vw, 3.6rem);
+  position: absolute;
+  width: 100%;
+}
+
+.form__section label .size-span {
+  position: relative;
+  color: var(--primary-text);
+  opacity: 0;
+  min-width: 8rem;
+}
+
+.form__section label {
+  position: relative;
+  display: flex;
+  justify-content: center;
   padding: 20px 0;
+  margin: 0 0 20px 0;
 }
 
 .form__section textarea {
@@ -328,6 +354,7 @@ form {
   text-align: start;
   max-width: 900px;
   font-family: "Regular";
+  overflow: hidden  ;
 }
 
 .form__section__input {
@@ -352,10 +379,21 @@ form {
   width: 70svw;
   max-width: 900px;
   color: var(--primary-text);
+  font-size: clamp(1.2rem, 6vw, 1.8rem);
+  text-wrap: balance;
+  text-align: start;
   font-family: "Regular";
+  color: var(--primary-text);
 }
 
-#vistaPreviaContainer h2, h3, h4, i, b, strike, pre, p {
+#vistaPreviaContainer h2,
+#vistaPreviaContainer h3,
+#vistaPreviaContainer h4,
+#vistaPreviaContainer i,
+#vistaPreviaContainer b,
+#vistaPreviaContainer strike,
+#vistaPreviaContainer pre,
+#vistaPreviaContainer p {
   position: static;
   padding: 20px 0;
   text-align: start;

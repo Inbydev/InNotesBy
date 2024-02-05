@@ -18,17 +18,26 @@
 
 			paragraphs.forEach(paragraph => {
 				const inputText = paragraph.innerHTML;
-				const convertedText = inputText
-					.replace(/_([^_]+)_/g, '<p><i>$1</i></p>')
-					.replace(/\*\*([^*]+)\*\*/g, '<p><b>$1</b></p>')
-					.replace(/--([^--]+)--/g, '<p><strike>$1</strike></p>')
-					.replace(/```([^`]+)```/g, '<pre><code>$1</code></pre>')
-					.replace(/###([^#]+)###/g, '<h4>$1</h4>')
-					.replace(/##([^#]+)##/g, '<h3>$1</h3>')
-					.replace(/#([^#\n]+)#/g, '<h2>$1</h2>')
-					.replace(/([^_<>*#\n]+)(?:(?:(?!\n$)\n)|(?:(?![^<]*>|[^<>]*<\/)(?![^`]*`[^`]*`)))/g, '<p>$1</p>');
 
-				paragraph.innerHTML = convertedText;
+				let htmlTexto = inputText.replace(/\n/g, ' <br>\n');
+		
+				htmlTexto = htmlTexto.replace(/###### (.*?)(\n|$)/g, '<h6>$1</h6>');
+				htmlTexto = htmlTexto.replace(/##### (.*?)(\n|$)/g, '<h5>$1</h5>');
+				htmlTexto = htmlTexto.replace(/#### (.*?)(\n|$)/g, '<h4>$1</h4>');
+				htmlTexto = htmlTexto.replace(/### (.*?)(\n|$)/g, '<h3>$1</h3>');
+				htmlTexto = htmlTexto.replace(/## (.*?)(\n|$)/g, '<h2>$1</h2>');
+
+				htmlTexto = htmlTexto.replace(/```(.+?)```/g, '<pre><code>$1</code></pre>');
+
+				htmlTexto = htmlTexto.replace(/\*\*\*(.+?)\*\*\*/g, '<i><b>$1</b></i>');
+
+				htmlTexto = htmlTexto.replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
+
+				htmlTexto = htmlTexto.replace(/\*(.+?)\*/g, '<i>$1</i>');
+
+				htmlTexto = htmlTexto.replace(/~~(.+?)~~/g, '<strike>$1</strike>');
+
+				paragraph.innerHTML = htmlTexto;
 			});
 		});
 	</script>

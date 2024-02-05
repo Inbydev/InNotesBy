@@ -11,7 +11,7 @@ head($title, $description, $othercss);
     <section class='wordarchive'>
         <h1>Existencialismo y Fundamentos de la Moral</h1>
         <h2 class='autor'>By: Infisito</h2>
-        <div class='markdown__container'>#Existencialismo#<br />
+        <p class='markdown__container'>#Existencialismo#<br />
 <br />
 _"Soy libre con un grado de responsabilidad"_, se comienza a ver esta filosofía de una manera pesimista; _"Uno también se hace responsable de las acciones de los demás"._ Porque toda acción sirve como ejemplo para los demás.<br />
 <br />
@@ -60,7 +60,7 @@ Cuando hay una persona sin amor propio está _**ahí**_ para romper las normas p
 "Tu quieres a alguien que te pueda hacer feliz". John Stuart Mill<br />
 Todas las relaciones se forman por algún motivo, como un intercambio o para satisfacer necesidades.<br />
 <br />
-Cuando falta uno de estos fundamentos, la norma se debilita y puede desaparecer con el tiempo. Pero si sigue manteniendo todos estos, entonces permanecerá vigente a lo largo del tiempo.</div>
+Cuando falta uno de estos fundamentos, la norma se debilita y puede desaparecer con el tiempo. Pero si sigue manteniendo todos estos, entonces permanecerá vigente a lo largo del tiempo.</p>
         <img src="/notas/images/64d1b0b5abf6e_e4cc03fa37be34c26911c0dbf780fd67.jpg"> 
     </section>
 
