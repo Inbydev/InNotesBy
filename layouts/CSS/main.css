@@ -396,10 +396,10 @@ section {
     .header__mobile__items
     .header__mobile__link
     .header__mobile__logo {
-        font-size: 44px;
+        font-size: 2rem;
+        padding-bottom: 10px;
         font-family: "RubikDoodleShadow";
         margin: 0;
-        padding: 0;
         background: linear-gradient(to right, var(--hover), var(--secondary-text), var(--tertiary-text));
         -webkit-background-clip: text;
         background-clip: text;

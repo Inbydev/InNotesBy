@@ -36,14 +36,6 @@ h3 {
   font-size: clamp(100% - 20px, 6vw, 34px);
 }
 
-.header__mobile__container
-    .header__mobile
-    .header__mobile__items
-    .header__mobile__link
-    .header__mobile__logo {
-        font-size: 2rem;
-}
-
 section {
   min-height: 50dvh;
 }
