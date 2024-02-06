@@ -347,7 +347,7 @@ section {
     justify-content: center;
     width: 98%;
     position: fixed;
-    inset: 84dvh auto auto 50%;
+    inset: 89dvh auto auto 50%;
     transform: translate(-50%, -50%);
 }
 
@@ -398,7 +398,9 @@ section {
     .header__mobile__logo {
         font-size: 44px;
         font-family: "RubikDoodleShadow";
-        background: linear-gradient(to right, var(--primary-text), var(--secondary-text), var(--tertiary-text));
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to right, var(--hover), var(--secondary-text), var(--tertiary-text));
         -webkit-background-clip: text;
         background-clip: text;
         background-size: 200%;
