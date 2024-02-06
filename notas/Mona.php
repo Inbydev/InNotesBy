@@ -12,7 +12,7 @@ head($title, $description, $othercss);
         <h1>corea</h1>
         <h2 class='autor'>By: Mona</h2>
         <p class='markdown__container'>
-_los_
+*los*
 **coreanos**
 ~~son~~
 ## muy
