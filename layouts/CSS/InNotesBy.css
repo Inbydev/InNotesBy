@@ -354,8 +354,8 @@ form {
 
 .form__section label .form__section__author,
 .form__section label span {
-  font-size: clamp(2.4rem, 6vw, 4rem);
-  line-height: clamp(3rem, 6vw, 4.8rem);
+  font-size: clamp(1.8rem, 6vw, 3.4rem);
+  line-height: clamp(2.4rem, 6vw, 4.2rem);
   text-align: start;
   font-style: italic;
   font-family: "Bold";
