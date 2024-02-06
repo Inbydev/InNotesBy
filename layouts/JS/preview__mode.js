@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function mostrarVistaPrevia() {
         const contenidoNota = document.getElementById("contenido").value;
         document.getElementById("contenido").style.display = "none";
+        document.getElementById("popup").style.overflowY = "scroll";
         
         var convertedText = convertirTexto(contenidoNota);
 
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function volverAEscribir() {
         const contenido = document.getElementById("contenido");
         contenido.style.display = "block";
+        document.getElementById("popup").style.overflowY = "hidden";
 
         if (paragraph) {
             paragraph.innerHTML = '';
