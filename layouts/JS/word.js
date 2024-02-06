@@ -1,20 +1,12 @@
-var tx = document.getElementsByClassName('form__textarea');
+var text = document.getElementById('contenido');
 
-for (var i = 0; i < tx.length; i++) {
-  tx[i].setAttribute('style', 'height:' + (tx[i].scrollHeight) + 'px; overflow-y:hidden;');
-  tx[i].addEventListener("input", OnInput, false);
-}
-
-function OnInput(e) {
-  var scrollLeft = window.pageXOffset || (document.documentElement || document.body.parentNode || document.body).scrollLeft;
-  var scrollTop  = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
-
+// Añade un evento de input al textarea
+text.addEventListener('input', function () {
+  // Ajusta la altura del textarea según el contenido
   this.style.height = 'auto';
-  this.style.height = (this.scrollHeight) + 'px';
-
-  window.scrollTo(scrollLeft, scrollTop);
-}
-
+  this.style.height = (this.scrollHeight > 38 * 16) ? '38rem' : (this.scrollHeight) + 'px';
+  this.style.overflowY = (this.scrollHeight > 38 * 16) ? 'auto' : 'hidden';
+});
 
 const textarea = document.getElementById("contenido");
 const btnItalic = document.getElementById("btnItalic");
