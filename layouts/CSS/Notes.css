@@ -52,6 +52,7 @@
 }
 
 .wordarchive .markdown__container code,
+.wordarchive .markdown__container code span,
 .wordarchive .markdown__container pre {
     background: 0 0;
     text-shadow: 0 1px rgba(0, 0, 0, 0.3);
@@ -71,6 +72,10 @@
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
+}
+
+.wordarchive .markdown__container code span {
+  color: #878cfa;
 }
 
 .wordarchive .markdown__container pre {
