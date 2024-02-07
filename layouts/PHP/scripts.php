@@ -17,32 +17,26 @@
 			const paragraphs = document.querySelectorAll('.markdown__container');
 
 			paragraphs.forEach(paragraph => {
-				const inputText = paragraph.innerHTML;
+				let inputText = paragraph.innerHTML;
 
-				let htmlTexto = inputText.replace(/</g, '&lt;').replace(/>/g, '&gt;');
-
-				htmlTexto = htmlTexto.replace(/\n/g, ' <br>\n');   
-
-				htmlTexto = htmlTexto.replace(/###### (.*?)(\n|$)/g, '<h6>$1</h6>');
-				htmlTexto = htmlTexto.replace(/##### (.*?)(\n|$)/g, '<h5>$1</h5>');
-				htmlTexto = htmlTexto.replace(/#### (.*?)(\n|$)/g, '<h4>$1</h4>');
-				htmlTexto = htmlTexto.replace(/### (.*?)(\n|$)/g, '<h3>$1</h3>');
-				htmlTexto = htmlTexto.replace(/## (.*?)(\n|$)/g, '<h2>$1</h2>');
-
-				htmlTexto = htmlTexto.replace(/```([\s\S]+?)```/g, function(match, p1) {
+				inputText.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+				
+				inputText = inputText.replace(/\n/g, ' <br>\n');   
+				inputText = inputText.replace(/###### (.*?)(\n|$)/g, '<h6>$1</h6>');
+				inputText = inputText.replace(/##### (.*?)(\n|$)/g, '<h5>$1</h5>');
+				inputText = inputText.replace(/#### (.*?)(\n|$)/g, '<h4>$1</h4>');
+				inputText = inputText.replace(/### (.*?)(\n|$)/g, '<h3>$1</h3>');
+				inputText = inputText.replace(/## (.*?)(\n|$)/g, '<h2>$1</h2>');
+				inputText = inputText.replace(/```([\s\S]+?)```/g, function(match, p1) {
 					p1 = p1.replace(/\/\*([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*\*+\//g, '<span class="code__comment">$&</span>');
 					return '<pre><code>' + p1 + '</code></pre>';
 				});
+				inputText = inputText.replace(/\*\*\*(.+?)\*\*\*/g, '<i><b>$1</b></i>');
+				inputText = inputText.replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
+				inputText = inputText.replace(/\*(.+?)\*/g, '<i>$1</i>');
+				inputText = inputText.replace(/~~(.+?)~~/g, '<s>$1</s>');
 
-				htmlTexto = htmlTexto.replace(/\*\*\*(.+?)\*\*\*/g, '<i><b>$1</b></i>');
-
-				htmlTexto = htmlTexto.replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
-
-				htmlTexto = htmlTexto.replace(/\*(.+?)\*/g, '<i>$1</i>');
-
-				htmlTexto = htmlTexto.replace(/~~(.+?)~~/g, '<strike>$1</strike>');
-
-				paragraph.innerHTML = htmlTexto;
+				paragraph.innerHTML = inputText;
 			});
 		});
 	</script>

@@ -4,10 +4,10 @@ $archivos = glob('notas/*.php');
 if (count($archivos) > 0) {
     echo "<section class='notas__container'>";
     echo <<<HTML
-    <nav>
+    <search>
         <label for="buscador">Buscar:</label>
         <input type="text" id="buscador" placeholder="Nombre de la nota..." />
-    </nav>
+    </search>
 HTML;
     echo "    <h2 class='h2list'>Notas Existentes:</h2>";
     echo "    <div class='notas'>";
