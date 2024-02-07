@@ -41,25 +41,19 @@ document.addEventListener("DOMContentLoaded", function () {
         let htmlTexto = contenidoNota.replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
         htmlTexto = htmlTexto.replace(/\n/g, ' <br>\n');   
-    
         htmlTexto = htmlTexto.replace(/###### (.*?)(\n|$)/g, '<h6>$1</h6>');
         htmlTexto = htmlTexto.replace(/##### (.*?)(\n|$)/g, '<h5>$1</h5>');
         htmlTexto = htmlTexto.replace(/#### (.*?)(\n|$)/g, '<h4>$1</h4>');
         htmlTexto = htmlTexto.replace(/### (.*?)(\n|$)/g, '<h3>$1</h3>');
         htmlTexto = htmlTexto.replace(/## (.*?)(\n|$)/g, '<h2>$1</h2>');
-
         htmlTexto = htmlTexto.replace(/```([\s\S]+?)```/g, function(match, p1) {
             p1 = p1.replace(/\/\*([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*\*+\//g, '<span class="code__comment">$&</span>');
             return '<pre><code>' + p1 + '</code></pre>';
         });
-    
         htmlTexto = htmlTexto.replace(/\*\*\*(.+?)\*\*\*/g, '<i><b>$1</b></i>');
-    
         htmlTexto = htmlTexto.replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
-    
         htmlTexto = htmlTexto.replace(/\*(.+?)\*/g, '<i>$1</i>');
-    
-        htmlTexto = htmlTexto.replace(/~~(.+?)~~/g, '<strike>$1</strike>');
+        htmlTexto = htmlTexto.replace(/~~(.+?)~~/g, '<s>$1</s>');
 
         return htmlTexto;
     }
