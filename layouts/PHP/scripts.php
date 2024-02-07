@@ -14,9 +14,8 @@
 	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
-			const paragraphs = document.querySelectorAll('.markdown__container');
+			const paragraph = document.querySelector('.markdown__container');
 
-			paragraphs.forEach(paragraph => {
 				let inputText = paragraph.innerHTML;
 
 				inputText.replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -37,6 +36,5 @@
 				inputText = inputText.replace(/~~(.+?)~~/g, '<s>$1</s>');
 
 				paragraph.innerHTML = inputText;
-			});
 		});
 	</script>

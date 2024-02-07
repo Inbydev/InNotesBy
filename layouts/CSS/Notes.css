@@ -45,10 +45,8 @@
     text-align: start;
     font-family: "Regular";
     text-wrap: balance;
-}
-
-.wordarchive .markdown__container p {
-  font-size: clamp(1.2rem, 6vw, 1.8rem);
+    font-size: clamp(1.2rem, 6vw, 1.8rem);
+    line-height: clamp(1.8rem, 6vw, 2.4rem);
 }
 
 .wordarchive .markdown__container code,
