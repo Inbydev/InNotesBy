@@ -366,7 +366,7 @@ form {
 
 
 .form__section label input {
-  left: clamp(2.6rem, 8vw, 3.6rem);
+  left: clamp(2.4rem, 8vw, 4.4rem);
   position: absolute;
   width: 100%;
 }
@@ -382,6 +382,7 @@ form {
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 20px 0;
   margin: 0 0 20px 0;
 }
@@ -465,7 +466,7 @@ form {
   font-family: "Bold";
 }
 
-#vistaPreviaContainer code span,
+#vistaPreviaContainer code,
 #vistaPreviaContainer pre {
     background: 0 0;
     text-shadow: 0 1px rgba(0, 0, 0, 0.3);
@@ -484,6 +485,27 @@ form {
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
+}
+
+#vistaPreviaContainer code span {
+    background: 0 0;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    font-size: 1rem;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    color: #878cfa;
 }
 
 #vistaPreviaContainer pre {
