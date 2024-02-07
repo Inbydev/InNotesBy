@@ -317,7 +317,7 @@ section {
 }
 
 .header__box .header__items .header__link .header__logo:hover {
-    background-position-x: -150px;
+    background-position-x: -380px;
     cursor: pointer;
 }
 
