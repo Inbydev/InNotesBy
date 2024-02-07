@@ -10,7 +10,7 @@ You can create notes with H2, H3, H4, H5, H6 headings, bold, italics, strikethro
 
 Check the features of the future by checking out the 'Projects' section on this GitHub repository.
 
-## New features added:
+## New features added
 - Preview Mode: allows you to see how your content will appear once it's published. By clicking it, you can view your written content with Markdown formatting.
 - New Design: improved intuitiveness and user-friendliness, easier to navigate and utilize.
 
