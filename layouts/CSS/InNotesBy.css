@@ -16,6 +16,15 @@ font-weight: normal;
 font-display: swap;
 }
 
+
+.header__mobile .header__mobile__items .header__mobile__link .header__mobile__logo:hover {
+  background-position-x: -280px;
+}
+
+.header__box .header__items .header__link .header__logo:hover {
+  background-position-x: -380px;
+}
+
 h1 {
   font-size: clamp(100% - 0.125rem, 16vw, 12rem);
   padding: 1rem 0 2rem 0;
