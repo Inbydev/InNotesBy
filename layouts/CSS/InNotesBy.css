@@ -624,7 +624,7 @@ border: 2px solid rgba(255, 255, 255, 0.6);
 border-radius: 10px;
 }
 
-.notas__container nav {
+.notas__container search {
 width: 100%;
 padding: 15px 10px;
 margin-bottom: 2em;
@@ -633,7 +633,7 @@ color: rgb(241, 215, 253);
 background: rgba(201, 85, 255, 0.1);
 }
 
-.notas__container nav input {
+.notas__container search input {
 background: none;
 color: rgba(241, 215, 253, 0.4);
 font-size: 1rem;
