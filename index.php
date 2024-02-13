@@ -9,19 +9,66 @@ $othercss = '<link rel="stylesheet" href="/layouts/CSS/InNotesBy.css">';
 head($title, $description, $headerjs, $otherjs, $othercss);
 ?>
 	<?php require('layouts/PHP/header.php') ?>
+    <main>
+        <section class="home" id="home">
+            <h1><span>In</span>Notes<span>By</span></h1>
+            <h2>Crea tu <span>nota!</span></h2>
+            <h3><a href="#guide">Guía de como usar este proyecto:</a></h3>
+        </section>
 
-	<section class="home" id="home">
-        <h1><span>In</span>Notes<span>By</span></h1>
-        <h2>Crea tu <span>nota!</span></h2>
-        <h3><a href="#guide">Guía de como usar este proyecto:</a></h3>
-	</section>
+        <section class="notes__section detector" id="create">
+            <button class="open__dialog__button" onclick="popup.showModal(); bodyHidden()">Crear Nota</button>
+            
+            <?php require('layouts/PHP/find_notes.php') ?>
+        </section>
 
-	<section class="notes__section detector" id="create">
-        <button class="open__dialog__button" onclick="popup.showModal(); bodyHidden()">Crear Nota</button>
-        
-        <?php require('layouts/PHP/find_notes.php') ?>
-	</section>
+        <section class="guide detector" id="guide">
+            <h3>Paso 1: Crear una Nueva Nota</h3>
+            <p>Presiona el botón <span>Crear Nota</span> para comenzar.</p>
 
+            <h3 class="two">Paso 2: Ingresar Datos de la Nota</h3>
+            <p>Ya dentro, verás un formulario con una barra de botones de navegación y más abajo verás un cuadrado donde irá el contenido de la nota,
+                para ingresar información general sobre tu nota, haz clic en el botón <span>Datos de la Nota</span>.
+                Aquí podrás ingresar el nombre de la nota. Este será el nombre que se verá tanto en la <span>URL</span> como en el <span>nombre de la misma nota</span>.
+                A continuación, aquí podrás ingresar el <span>título de la nota</span>, siendo este el <span>encabezado principal</span> de la página de la nota.
+                También, aquí podrás proporcionar el <span>nombre del autor</span> de la nota para identificar al creador.</p>
+
+            <h3>Paso 3: Edición de contenido</h3>
+            <p>Dirígete a la sección <span>Contenido</span> abajo de la barra de navegación para comenzar a redactar o pegar el contenido de tu nota.
+                Para dar <span>formato</span> al texto, utiliza las herramientas encontradas en el botón <span>Edición de contenido</span>. Aquí puedes aplicar al texto seleccionado:</p>
+
+            <ul>
+                <li><i>Itálica</i></li>
+                <li><b>Negrita</b></li>
+                <li><strike>Tachado</strike></li>
+                <li>Diferentes tamaños de título</li>
+                <li><code>Bloques de código</code></li>
+                <li>Agregar una imagen al contenido <span><i>(opcional, múltiples imágenes dentro del contenido próximamente).</i></span></li>
+            </ul>
+
+            <h3>Paso 4: Guardar o Cerrar la Nota</h3>
+
+            <p>Una vez que hayas terminado de crear tu nota, puedes presionar el botón <span>Crear Nota</span> para almacenar la nota en InNotesBy.
+                Si deseas continuar trabajando en la nota más tarde, puedes cerrarla presionando el botón <span>Cerrar</span>. <span><i>(próximamente estará la función de guardar automáticamente, actualmente no está esa funcionalidad)</i></span></p>
+
+            <h3 class="two">Recuerda!</h3>
+
+            <p>El <span>nombre de la nota</span> no puede contener <span>carácteres especiales</span>!</p>
+
+            <h3 class="not">¡Ya sabiendo esto, estás preparado para crear tu nota en <span>InNotesBy</span>!</h3>
+        </section>
+
+        <footer>
+            <p>
+                <a href="https://github.com/Inbydev/Inby.dev">InNotesBy</a> © 2023 - 2024
+                by
+                <a href="https://github.com/Inbydev">Inbydev</a>
+                is licensed under
+                <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" style="display:inline-block;">CC BY-SA 4.0
+                </a>
+            </p>
+        </footer>
+    </main>
     
 	<dialog id="popup">
         <div class="background">	
@@ -59,9 +106,12 @@ head($title, $description, $headerjs, $otherjs, $othercss);
                     <button class="markdown__button just__stroke" type="button" id="btnBold"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Edit / Bold"> <path id="Vector" d="M8 12H12.5M8 12V5H12.5C14.433 5 16 6.567 16 8.5C16 10.433 14.433 12 12.5 12M8 12V19H13.5C15.433 19 17 17.433 17 15.5C17 13.567 15.433 12 13.5 12H12.5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg></button>
                     <button class="markdown__button just__stroke" type="button" id="btnStrikethrough"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Edit / Strikethrough"> <path id="Vector" d="M12.0005 12.0001C12.8959 12.0001 13.7749 12.1925 14.5457 12.5571C14.8939 12.7218 15.2146 12.9192 15.5009 13.1437C15.8484 13.4162 16.1457 13.729 16.3822 14.0732C16.8136 14.7009 17.0263 15.4096 16.9982 16.1256C16.97 16.8416 16.702 17.5385 16.2222 18.1433C15.7424 18.7481 15.0684 19.2386 14.2705 19.5638C13.4727 19.889 12.5802 20.0373 11.6865 19.9923C10.7928 19.9473 9.93104 19.7108 9.19043 19.3082C8.44982 18.9055 7.85782 18.3514 7.47656 17.7032M12.0005 12.0001H4M12.0005 12.0001H20M16.5243 6.29718C16.143 5.649 15.5512 5.09462 14.8105 4.69197C14.0699 4.28932 13.2076 4.05287 12.314 4.00789C11.4203 3.96291 10.5278 4.11091 9.72998 4.43613C8.93213 4.76135 8.25812 5.25205 7.77832 5.85689C7.29852 6.46173 7.03057 7.15885 7.00244 7.87485C6.9942 8.08463 7.00669 8.29345 7.03924 8.50014" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg></button>
                     <button class="markdown__button just__stroke" type="button" id="btnBlockcode"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9 8L5 11.6923L9 16M15 8L19 11.6923L15 16" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></button>
-                    <button class="markdown__button just__fill" type="button" id="btnBigHeader"><svg fill="#FFFFFF" viewBox="-4.5 -7 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-header-2"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M2 4h4V1a1 1 0 1 1 2 0v8a1 1 0 1 1-2 0V6H2v3a1 1 0 1 1-2 0V1a1 1 0 1 1 2 0v3zm12.88 4.352V10H10V8.986l.1-.246 1.785-1.913c.43-.435.793-.77.923-1.011.124-.23.182-.427.182-.587 0-.14-.04-.242-.127-.327a.469.469 0 0 0-.351-.127.443.443 0 0 0-.355.158c-.105.117-.165.288-.173.525l-.012.338h-1.824l.016-.366c.034-.735.272-1.33.718-1.77.446-.44 1.02-.66 1.703-.66.424 0 .805.091 1.14.275.336.186.606.455.806.8.198.343.3.7.3 1.063 0 .416-.23.849-.456 1.307-.222.45-.534.876-1.064 1.555l-.116.123-.254.229h1.938z"></path></g></svg></button>
-                    <button class="markdown__button just__fill" type="button" id="btnNormalHeader"><svg fill="#FFFFFF" viewBox="-4.5 -6.5 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-header-3"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M2 4h4V1a1 1 0 1 1 2 0v8a1 1 0 1 1-2 0V6H2v3a1 1 0 1 1-2 0V1a1 1 0 1 1 2 0v3zm12.453 2.513l.043.055c.254.334.38.728.38 1.172 0 .637-.239 1.187-.707 1.628-.466.439-1.06.658-1.763.658-.671 0-1.235-.209-1.671-.627-.436-.418-.673-.983-.713-1.676L10 7.353h1.803l.047.295c.038.238.112.397.215.49.1.091.23.137.402.137a.566.566 0 0 0 .422-.159.5.5 0 0 0 .158-.38c0-.163-.067-.295-.224-.419-.17-.134-.438-.21-.815-.215l-.345-.004v-1.17l.345-.004c.377-.004.646-.08.815-.215.157-.124.224-.255.224-.418a.5.5 0 0 0-.158-.381.566.566 0 0 0-.422-.159.568.568 0 0 0-.402.138c-.103.092-.177.251-.215.489l-.047.295H10l.022-.37c.04-.693.277-1.258.713-1.675.436-.419 1-.628 1.67-.628.704 0 1.298.22 1.764.658.468.441.708.991.708 1.629a1.892 1.892 0 0 1-.424 1.226z"></path></g></svg></button>
-                    <button class="markdown__button just__fill" type="button" id="btnSmallHeader"><svg fill="#FFFFFF" viewBox="-4.5 -7 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-header-4"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M2 4h4V1a1 1 0 1 1 2 0v8a1 1 0 1 1-2 0V6H2v3a1 1 0 1 1-2 0V1a1 1 0 1 1 2 0v3zm10.636 4.74H10V7.302l.06-.198 2.714-4.11h1.687v3.952h.538V8.74h-.538V10h-1.825V8.74zm.154-1.283V5.774l-1.1 1.683h1.1z"></path></g></svg></button>
+                    <button class="markdown__button just__fill" type="button" id="headerH2"><svg fill="#FFFFFF" viewBox="-4.5 -7 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-header-2"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M2 4h4V1a1 1 0 1 1 2 0v8a1 1 0 1 1-2 0V6H2v3a1 1 0 1 1-2 0V1a1 1 0 1 1 2 0v3zm12.88 4.352V10H10V8.986l.1-.246 1.785-1.913c.43-.435.793-.77.923-1.011.124-.23.182-.427.182-.587 0-.14-.04-.242-.127-.327a.469.469 0 0 0-.351-.127.443.443 0 0 0-.355.158c-.105.117-.165.288-.173.525l-.012.338h-1.824l.016-.366c.034-.735.272-1.33.718-1.77.446-.44 1.02-.66 1.703-.66.424 0 .805.091 1.14.275.336.186.606.455.806.8.198.343.3.7.3 1.063 0 .416-.23.849-.456 1.307-.222.45-.534.876-1.064 1.555l-.116.123-.254.229h1.938z"></path></g></svg></button>
+                    <button class="markdown__button just__fill" type="button" id="headerH3"><svg fill="#FFFFFF" viewBox="-4.5 -6.5 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-header-3"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M2 4h4V1a1 1 0 1 1 2 0v8a1 1 0 1 1-2 0V6H2v3a1 1 0 1 1-2 0V1a1 1 0 1 1 2 0v3zm12.453 2.513l.043.055c.254.334.38.728.38 1.172 0 .637-.239 1.187-.707 1.628-.466.439-1.06.658-1.763.658-.671 0-1.235-.209-1.671-.627-.436-.418-.673-.983-.713-1.676L10 7.353h1.803l.047.295c.038.238.112.397.215.49.1.091.23.137.402.137a.566.566 0 0 0 .422-.159.5.5 0 0 0 .158-.38c0-.163-.067-.295-.224-.419-.17-.134-.438-.21-.815-.215l-.345-.004v-1.17l.345-.004c.377-.004.646-.08.815-.215.157-.124.224-.255.224-.418a.5.5 0 0 0-.158-.381.566.566 0 0 0-.422-.159.568.568 0 0 0-.402.138c-.103.092-.177.251-.215.489l-.047.295H10l.022-.37c.04-.693.277-1.258.713-1.675.436-.419 1-.628 1.67-.628.704 0 1.298.22 1.764.658.468.441.708.991.708 1.629a1.892 1.892 0 0 1-.424 1.226z"></path></g></svg></button>
+                    <button class="markdown__button just__fill" type="button" id="headerH4"><svg fill="#FFFFFF" viewBox="-4.5 -7 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-header-4"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M2 4h4V1a1 1 0 1 1 2 0v8a1 1 0 1 1-2 0V6H2v3a1 1 0 1 1-2 0V1a1 1 0 1 1 2 0v3zm10.636 4.74H10V7.302l.06-.198 2.714-4.11h1.687v3.952h.538V8.74h-.538V10h-1.825V8.74zm.154-1.283V5.774l-1.1 1.683h1.1z"></path></g></svg></button>
+                    <button class="markdown__button just__fill" type="button" id="headerH5"><svg fill="#FFFFFF" viewBox="-4.5 -7 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-header-5"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M2 4h4V1a1 1 0 1 1 2 0v8a1 1 0 1 1-2 0V6H2v3a1 1 0 1 1-2 0V1a1 1 0 1 1 2 0v3zm8.003 4.317h2.68c.386 0 .699-.287.699-.642 0-.355-.313-.642-.698-.642H10.01l.002-.244L10 3h5.086v1.888h-3.144l.014.617h1.114c1.355 0 2.469.984 2.523 2.23.052 1.21-.972 2.231-2.288 2.28l-.095.001-3.21-.02V8.73l.003-.414z"></path></g></svg></button>
+                    <button class="markdown__button just__fill" type="button" id="headerH6"><svg fill="#FFFFFF" viewBox="-4.5 -7 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-header-6"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M2 4h4V1a1 1 0 1 1 2 0v8a1 1 0 1 1-2 0V6H2v3a1 1 0 1 1-2 0V1a1 1 0 1 1 2 0v3zm11.949 2.057c.43.44.651.999.651 1.64 0 .629-.228 1.18-.67 1.62-.442.437-.99.663-1.613.663a2.212 2.212 0 0 1-1.649-.693c-.43-.45-.652-.985-.652-1.58 0-.224.034-.449.1-.672.063-.211.664-1.627.837-1.966.251-.491.65-1.204 1.197-2.137l1.78.652-.917 1.88c.249.113.733.386.936.593zm-1.63.765a.85.85 0 0 0-.858.863.85.85 0 0 0 .252.613.865.865 0 0 0 1.48-.614.844.844 0 0 0-.25-.611.866.866 0 0 0-.623-.251z"></path></g></svg></button>
+                    <button class="markdown__button just__stroke" type="button" id="btnLink"><svg viewBox="-2 -2 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.16488 17.6505C8.92513 17.8743 8.73958 18.0241 8.54996 18.1336C7.62175 18.6695 6.47816 18.6695 5.54996 18.1336C5.20791 17.9361 4.87912 17.6073 4.22153 16.9498C3.56394 16.2922 3.23514 15.9634 3.03767 15.6213C2.50177 14.6931 2.50177 13.5495 3.03767 12.6213C3.23514 12.2793 3.56394 11.9505 4.22153 11.2929L7.04996 8.46448C7.70755 7.80689 8.03634 7.47809 8.37838 7.28062C9.30659 6.74472 10.4502 6.74472 11.3784 7.28061C11.7204 7.47809 12.0492 7.80689 12.7068 8.46448C13.3644 9.12207 13.6932 9.45086 13.8907 9.7929C14.4266 10.7211 14.4266 11.8647 13.8907 12.7929C13.7812 12.9825 13.6314 13.1681 13.4075 13.4078M10.5919 10.5922C10.368 10.8319 10.2182 11.0175 10.1087 11.2071C9.57284 12.1353 9.57284 13.2789 10.1087 14.2071C10.3062 14.5492 10.635 14.878 11.2926 15.5355C11.9502 16.1931 12.279 16.5219 12.621 16.7194C13.5492 17.2553 14.6928 17.2553 15.621 16.7194C15.9631 16.5219 16.2919 16.1931 16.9495 15.5355L19.7779 12.7071C20.4355 12.0495 20.7643 11.7207 20.9617 11.3787C21.4976 10.4505 21.4976 9.30689 20.9617 8.37869C20.7643 8.03665 20.4355 7.70785 19.7779 7.05026C19.1203 6.39267 18.7915 6.06388 18.4495 5.8664C17.5212 5.3305 16.3777 5.3305 15.4495 5.8664C15.2598 5.97588 15.0743 6.12571 14.8345 6.34955" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></path> </g></svg></button>
                     <label for="imagen_subida" class="markdown__button just__stroke">
                         <input type="file" id="imagen_subida" class="form__file" name="imagen_subida">
                         <svg viewBox="-2 -2 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14.2647 15.9377L12.5473 14.2346C11.758 13.4519 11.3633 13.0605 10.9089 12.9137C10.5092 12.7845 10.079 12.7845 9.67922 12.9137C9.22485 13.0605 8.83017 13.4519 8.04082 14.2346L4.04193 18.2622M14.2647 15.9377L14.606 15.5991C15.412 14.7999 15.8149 14.4003 16.2773 14.2545C16.6839 14.1262 17.1208 14.1312 17.5244 14.2688C17.9832 14.4253 18.3769 14.834 19.1642 15.6515L20 16.5001M14.2647 15.9377L18.22 19.9628M18.22 19.9628C17.8703 20 17.4213 20 16.8 20H7.2C6.07989 20 5.51984 20 5.09202 19.782C4.7157 19.5903 4.40973 19.2843 4.21799 18.908C4.12583 18.7271 4.07264 18.5226 4.04193 18.2622M18.22 19.9628C18.5007 19.9329 18.7175 19.8791 18.908 19.782C19.2843 19.5903 19.5903 19.2843 19.782 18.908C20 18.4802 20 17.9201 20 16.8V13M11 4H7.2C6.07989 4 5.51984 4 5.09202 4.21799C4.7157 4.40973 4.40973 4.71569 4.21799 5.09202C4 5.51984 4 6.0799 4 7.2V16.8C4 17.4466 4 17.9066 4.04193 18.2622M18 9V6M18 6V3M18 6H21M18 6H15" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
@@ -82,59 +132,6 @@ head($title, $description, $headerjs, $otherjs, $othercss);
             </section>
 		</form>
 	</dialog>
-
-    <section class="guide detector" id="guide">
-        <h3>Paso 1: Crear una Nueva Nota</h3>
-        <p>Presiona el botón <span>Crear Nota</span> para comenzar.</p>
-
-        <h3 class="two">Paso 2: Ingresar Datos de la Nota</h3>
-        <p>Ya dentro, verás un formulario con una barra de botones de navegación y más abajo verás un cuadrado donde irá el contenido de la nota,
-            para ingresar información general sobre tu nota, haz clic en el botón <span>Datos de la Nota</span>.
-            Aquí podrás ingresar el nombre de la nota. Este será el nombre que se verá tanto en la <span>URL</span> como en el <span>nombre de la misma nota</span>.
-            A continuación, aquí podrás ingresar el <span>título de la nota</span>, siendo este el <span>encabezado principal</span> de la página de la nota.
-            También, aquí podrás proporcionar el <span>nombre del autor</span> de la nota para identificar al creador.</p>
-
-        <h3>Paso 3: Edición de contenido</h3>
-        <p>Dirígete a la sección <span>Contenido</span> abajo de la barra de navegación para comenzar a redactar o pegar el contenido de tu nota.
-            Para dar <span>formato</span> al texto, utiliza las herramientas encontradas en el botón <span>Edición de contenido</span>. Aquí puedes aplicar al texto seleccionado:</p>
-
-        <ul>
-            <li><i>Itálica</i></li>
-            <li><b>Negrita</b></li>
-            <li><strike>Tachado</strike></li>
-            <li>Diferentes tamaños de título</li>
-            <li><code>Bloques de código</code></li>
-            <li>Agregar una imagen al contenido <span><i>(opcional, múltiples imágenes dentro del contenido próximamente).</i></span></li>
-        </ul>
-
-        <h3>Paso 4: Guardar o Cerrar la Nota</h3>
-
-        <p>Una vez que hayas terminado de crear tu nota, puedes presionar el botón <span>Crear Nota</span> para almacenar la nota en InNotesBy.
-            Si deseas continuar trabajando en la nota más tarde, puedes cerrarla presionando el botón <span>Cerrar</span>. <span><i>(próximamente estará la función de guardar automáticamente, actualmente no está esa funcionalidad)</i></span></p>
-
-        <h3 class="two">Recuerda!</h3>
-
-        <p>El <span>nombre de la nota</span> no puede contener <span>carácteres especiales</span>!</p>
-
-        <h3 class="not">¡Ya sabiendo esto, estás preparado para crear tu nota en <span>InNotesBy</span>!</h3>
-    </section>
-
-	<footer>
-		<p>
-			<a href="https://github.com/Inbydev/Inby.dev">InNotesBy</a> © 2023 - 2024
-			by
-			<a href="https://github.com/Inbydev">Inbydev</a>
-			is licensed under
-			<a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" style="display:inline-block;">CC BY-SA 4.0
-			</a>
-		</p>
-	</footer>
-
-	<style>
-		a {
-			color: var(--tertiary-text);
-		}
-	</style>
     
 	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
