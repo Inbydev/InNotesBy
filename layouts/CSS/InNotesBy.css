@@ -305,6 +305,10 @@ form {
   min-width: 2.4rem;
 }
 
+.markdown__navigation .markdown__button.active {
+  background: rgb(0, 128, 255);
+}
+
 .markdown__navigation .markdown__button svg,
 .markdown__navigation .markdown__button svg path {
   transition: var(--f-h-s);

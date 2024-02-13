@@ -34,6 +34,7 @@
 				inputText = inputText.replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
 				inputText = inputText.replace(/\*(.+?)\*/g, '<i>$1</i>');
 				inputText = inputText.replace(/~~(.+?)~~/g, '<s>$1</s>');
+				inputText = inputText.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>');
 
 				paragraph.innerHTML = inputText;
 		});

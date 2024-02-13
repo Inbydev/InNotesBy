@@ -109,6 +109,10 @@ a {
     text-decoration: none;
 }
 
+a {
+    color: var(--tertiary-text);
+}
+
 body {
     background: var(--background);
     font-family: var(--font);
@@ -485,7 +489,7 @@ section[id] {
         display: flex;
     }
 
-    header,
+    .header,
     .header__box {
         display: none;
     }

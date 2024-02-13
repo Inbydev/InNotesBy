@@ -1,212 +1,208 @@
-var text = document.getElementById('contenido');
+var text = document.getElementById("contenido");
 
-// Añade un evento de input al textarea
-text.addEventListener('input', function () {
-  // Ajusta la altura del textarea según el contenido
-  this.style.height = 'auto';
-  this.style.height = (this.scrollHeight > 38 * 16) ? '38rem' : (this.scrollHeight) + 'px';
-  this.style.overflowY = (this.scrollHeight > 38 * 16) ? 'auto' : 'hidden';
+text.addEventListener("input", function () {
+    this.style.height = "auto";
+    this.style.height = this.scrollHeight > 38 * 16 ? "38rem" : this.scrollHeight + "px";
+    this.style.overflowY = this.scrollHeight > 38 * 16 ? "auto" : "hidden";
 });
-
-const textarea = document.getElementById("contenido");
-const btnItalic = document.getElementById("btnItalic");
-const btnBold = document.getElementById("btnBold");
-const btnStrikethrough = document.getElementById("btnStrikethrough");
-const btnBlockcode = document.getElementById("btnBlockcode");
-const btnBigHeader = document.getElementById("btnBigHeader");
-const btnNormalHeader = document.getElementById("btnNormalHeader");
-const btnSmallHeader = document.getElementById("btnSmallHeader");
-
-function getSelectedHeader() {
-  const start = textarea.selectionStart;
-  const end = textarea.selectionEnd;
-  const text = textarea.value;
-
-  const headers = ["#", "##", "###"];
-
-  for (const header of headers) {
-    if (text.startsWith(header + " ", start) && text.endsWith(" " + header, end)) {
-      return header;
-    }
-  }
-
-  return null;
-}
-
-let isHeaderFormat = false;
-
-function removeHeaderFormat(header) {
-  const start = textarea.selectionStart;
-  const end = textarea.selectionEnd;
-  const text = textarea.value;
-
-  const formattedHeader = header + " ";
-  const headerStart = text.lastIndexOf(formattedHeader, start);
-  const headerEnd = text.indexOf(" " + header, end);
-
-  if (headerStart !== -1 && headerEnd !== -1 && headerStart < headerEnd) {
-    textarea.value =
-      text.substring(0, headerStart) +
-      text.substring(headerStart + formattedHeader.length, headerEnd) +
-      text.substring(headerEnd + header.length + 1);
-    textarea.setSelectionRange(headerStart, headerStart + end - start - (header.length + 1));
-  }
-}
-
-function removeCurrentHeaderFormat() {
-  const selectedHeader = getSelectedHeader();
-  if (selectedHeader) {
-    const headerType = getHeaderType(selectedHeader);
-    const markerLength = headerType === "big" ? 1 : headerType === "normal" ? 2 : 3;
-    const start = textarea.selectionStart - markerLength;
-    const end = textarea.selectionEnd + markerLength;
-    textarea.setSelectionRange(start, end);
-    removeHeaderFormat(selectedHeader);
-  }
-}
-
-function insertText(marker) {
-  const start = textarea.selectionStart;
-  const end = textarea.selectionEnd;
-  const selectedText = textarea.value.substring(start, end);
-
-  const selectedHeader = getSelectedHeader();
-
-  if (isHeaderFormat) {
-    // Si ya hay un formato de encabezado, eliminarlo
-    removeHeaderFormat(selectedHeader);
-    isHeaderFormat = false;
-  } else if (selectedHeader && selectedHeader === marker && selectedText.trim() === "") {
-    // Eliminar el formato si ya existe y no hay texto seleccionado
-    removeHeaderFormat(selectedHeader);
-    isHeaderFormat = false;
-  } else {
-    // Eliminar el formato del encabezado actual, si hay uno
-    removeCurrentHeaderFormat();
-    // Agregar el formato
-    textarea.value = textarea.value.substring(0, start) + `${marker}${selectedText}${marker}` + textarea.value.substring(end);
-    const newEnd = end + marker.length * 2;
-    textarea.setSelectionRange(start + marker.length, newEnd);
-    isHeaderFormat = marker.startsWith("#"); // Actualizar el estado del formato de encabezado
-  }
-
-  // Recargar el estado de los botones
-  updateButtonStates();
-  // Enfocar el textarea para que el cursor siga seleccionando el texto
-  textarea.focus();
-}
-
-function isOnlySpaces(text) {
-  return text.trim().length === 0;
-}
-
-function updateButtonStates() {
-  const selectedText = textarea.value.substring(textarea.selectionStart, textarea.selectionEnd);
-  const isAllSpaces = isOnlySpaces(selectedText);
-
-  const buttons = [btnItalic, btnBold, btnStrikethrough, btnBlockcode, btnBigHeader, btnNormalHeader, btnSmallHeader];
-
-  buttons.forEach((btn) => {
-    btn.disabled = selectedText.length === 0 || isAllSpaces;
-  });
-}
-
-btnItalic.addEventListener("click", () => {
-  insertText("_");
-});
-
-btnBold.addEventListener("click", () => {
-  insertText("**");
-});
-
-btnStrikethrough.addEventListener("click", () => {
-  insertText("--");
-});
-
-btnBlockcode.addEventListener("click", () => {
-  insertText("```");
-});
-
-btnBigHeader.addEventListener("click", () => {
-  insertText("#");
-});
-
-btnNormalHeader.addEventListener("click", () => {
-  insertText("##");
-});
-
-btnSmallHeader.addEventListener("click", () => {
-  insertText("###");
-});
-
-textarea.addEventListener("select", () => {
-  updateButtonStates();
-});
-
-textarea.addEventListener("input", () => {
-  updateButtonStates();
-});
-
-
-
-const inputs = document.querySelectorAll('.form__group__data input');
-const mensajeErrores = document.querySelectorAll('.form__input__error');
-const BtnCreatePage = document.getElementById('CreatePage');
-
-
-function contieneCaracteresEspeciales(texto) {
-    return texto.includes('<') || texto.includes('>');
-}
-
-inputs.forEach((campo, index) => {
-    campo.addEventListener('input', function() {
-        const valorCampo = campo.value;
-        
-        if (contieneCaracteresEspeciales(valorCampo)) {
-            mensajeErrores[index].style.opacity = '1';
-            BtnCreatePage.disabled = true;
-        } else {
-            mensajeErrores[index].style.opacity = '0';
-            BtnCreatePage.disabled = [...inputs].some(input => contieneCaracteresEspeciales(input.value));
-        }
-    });
-});
-
-const boton__select = document.querySelectorAll(".text__edit__button");
-
-boton__select.forEach((boton, index) => {
-    boton.addEventListener("click", () => {
-        boton__select.forEach((b, i) => {
-            const isActive = i === index;
-            b.classList.toggle("active", isActive);
-            if (isActive) {
-                localStorage.setItem("activeButtonIndex", index);
-            }
-        });
-    });
-  
-    const activeButtonIndex = localStorage.getItem("activeButtonIndex");
-    if (activeButtonIndex !== null && parseInt(activeButtonIndex) === index) {
-      boton.classList.add("active");
-    }
-});
-
-const background__boton__select = document.querySelectorAll(".form__group__background button");
-
-background__boton__select.forEach((background__boton, index) => {
-    background__boton.addEventListener("click", () => {
-        background__boton__select.forEach((j, i) => {
-            const isActive = i === index;
-            j.classList.toggle("active", isActive);
-        });
-    });
-});
-
 
 function bodyHidden() {
-  document.body.classList.add('hidden');
+    document.body.classList.add("hidden");
 }
 
 function bodyNoHidden() {
-  document.body.classList.remove('hidden');
+    document.body.classList.remove("hidden");
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const textarea = document.getElementById("contenido");
+    const buttons = document.querySelectorAll(".markdown__button");
+
+    textarea.addEventListener("mouseup", () => {
+        buttons.forEach((button) => {
+            const id = button.id;
+            const selection = textarea.value.substring(textarea.selectionStart, textarea.selectionEnd);
+            let active = false;
+
+            switch (id) {
+                case "btnItalic":
+                    active = containsItalic(selection);
+                    break;
+                case "btnBold":
+                    active = containsBold(selection);
+                    break;
+                case "btnStrikethrough":
+                    active = containsStrikethrough(selection);
+                    break;
+                case "btnBlockcode":
+                    active = isBlockcode(selection);
+                    break;
+                case "btnLink":
+                    active = isLink(selection);
+                    break;
+                case "headerH2":
+                    active = isHeader(selection, "## ");
+                    break;
+                case "headerH3":
+                    active = isHeader(selection, "### ");
+                    break;
+                case "headerH4":
+                    active = isHeader(selection, "#### ");
+                    break;
+                case "headerH5":
+                    active = isHeader(selection, "##### ");
+                    break;
+                case "headerH6":
+                    active = isHeader(selection, "###### ");
+                    break;
+                default:
+                    break;
+            }
+
+            button.classList.toggle("active", active);
+        });
+    });
+
+    function containsItalic(text) {
+        return text.includes("*");
+    }
+
+    function containsBold(text) {
+        return text.includes("**");
+    }
+
+    function containsStrikethrough(text) {
+        return text.includes("~~");
+    }
+
+    function isBlockcode(text) {
+        return text.startsWith("```") && text.endsWith("```") && text.indexOf("```", 3) === text.length - 3;
+    }
+
+    function isLink(text) {
+        return text.startsWith("[") && text.endsWith(")");
+    }
+
+    function isHeader(text, headerPrefix) {
+        return text.startsWith(headerPrefix) && !text.includes("#", headerPrefix.length);
+    }
+
+    buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const selection = textarea.value.substring(textarea.selectionStart, textarea.selectionEnd);
+            const id = button.id;
+
+            let newText = "";
+
+            switch (id) {
+                case "btnItalic":
+                    newText = toggleItalic(selection);
+                    break;
+                case "btnBold":
+                    newText = toggleBold(selection);
+                    break;
+                case "btnStrikethrough":
+                    newText = toggleStrikethrough(selection);
+                    break;
+                case "btnBlockcode":
+                    newText = toggleBlockcode(selection);
+                    break;
+                case "btnLink":
+                    newText = toggleLink(selection);
+                    break;
+                case "headerH2":
+                    newText = toggleHeader(selection, "## ");
+                    break;
+                case "headerH3":
+                    newText = toggleHeader(selection, "### ");
+                    break;
+                case "headerH4":
+                    newText = toggleHeader(selection, "#### ");
+                    break;
+                case "headerH5":
+                    newText = toggleHeader(selection, "##### ");
+                    break;
+                case "headerH6":
+                    newText = toggleHeader(selection, "###### ");
+                    break;
+                default:
+                    break;
+            }
+
+            insertMarkdown(newText);
+        });
+    });
+
+    function insertMarkdown(text) {
+        const startPos = textarea.selectionStart;
+        const endPos = textarea.selectionEnd;
+        const scrollTop = textarea.scrollTop;
+        const prefix = textarea.value.substring(0, startPos);
+        const suffix = textarea.value.substring(endPos);
+        textarea.value = prefix + text + suffix;
+        textarea.focus();
+        textarea.selectionStart = startPos + text.length;
+        textarea.selectionEnd = startPos + text.length;
+        textarea.scrollTop = scrollTop;
+    }
+
+    function toggleItalic(text) {
+        if (text.startsWith("*") && text.endsWith("*")) {
+            return text.slice(1, -1);
+        } else {
+            return "*" + text + "*";
+        }
+    }
+
+    function toggleBold(text) {
+        if (text.startsWith("**") && text.endsWith("**")) {
+            return text.slice(2, -2);
+        } else {
+            return "**" + text + "**";
+        }
+    }
+
+    function toggleStrikethrough(text) {
+        if (text.startsWith("~~") && text.endsWith("~~")) {
+            return text.slice(2, -2);
+        } else {
+            return "~~" + text + "~~";
+        }
+    }
+
+    function toggleBlockcode(text) {
+        if (isBlockcode(text)) {
+            return text.slice(3, -3);
+        } else {
+            return "```" + text + "```";
+        }
+    }
+
+    function toggleLink(text) {
+        if (isLink(text)) {
+            const tituloStart = text.indexOf("[");
+            const tituloEnd = text.indexOf("]");
+            const enlaceStart = text.indexOf("(");
+            const enlaceEnd = text.indexOf(")");
+            
+            if (tituloStart !== -1 && tituloEnd !== -1 && enlaceStart !== -1 && enlaceEnd !== -1) {
+                return text.substring(enlaceStart + 1, enlaceEnd);
+            } else {
+                return text;
+            }
+        } else if (text.startsWith("https://")) {
+            return "[Titulo](" + text + ")";
+        } else {
+            return text;
+        }
+    }
+
+    function toggleHeader(text, headerPrefix) {
+        if (isHeader(text, headerPrefix)) {
+            return text.substring(headerPrefix.length);
+        } else {
+            let newText = text.replace(/^#{1,6}\s*/, "");
+            return headerPrefix + newText.trim();
+        }
+    }
+});

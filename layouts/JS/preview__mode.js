@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         htmlTexto = htmlTexto.replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
         htmlTexto = htmlTexto.replace(/\*(.+?)\*/g, '<i>$1</i>');
         htmlTexto = htmlTexto.replace(/~~(.+?)~~/g, '<s>$1</s>');
+        htmlTexto = htmlTexto.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>');
 
         return htmlTexto;
     }
