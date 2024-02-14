@@ -123,7 +123,6 @@ h2 span:nth-child(1) {
   font-size: var(--fs-tag);
   line-height: var(--fs-p);
   text-align: start;
-  text-wrap: balance;
 }
 
 .guide__background__text span:nth-child(2) {
