@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else if (text.startsWith("https://")) {
             return "[Titulo](" + text + ")";
         } else {
-            return text;
+            return "[Titulo](link)";
         }
     }
 
