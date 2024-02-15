@@ -14,13 +14,13 @@ function head($title, $description, $othercss = null, $headerjs = null, $otherjs
 	<meta name="theme-color" content="#896db7">
 	<meta property="og:title" content="$title">
 	<meta property="og:description" content="$description">
-	<link rel="icon" href="/Images/icono.ico">
+	<link rel="icon" href="/InNotesBy/Images/icono.ico">
 	<title>$title</title>
-	<link rel="stylesheet" href="/layouts/CSS/main.css">
+	<link rel="stylesheet" href="/InNotesBy/layouts/CSS/main.css">
 	$othercss
 	$headerjs
 	$otherjs
-	<script defer src="/layouts/JS/header__mobile.js"></script>
+	<script defer src="/InNotesBy/layouts/JS/header__mobile.js"></script>
 </head>
 
 

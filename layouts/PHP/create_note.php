@@ -23,11 +23,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $tipoArchivo = $_FILES['imagen_subida']['type'];
         $tamanioArchivo = $_FILES['imagen_subida']['size'];
     
-        $extensionesPermitidas = array('png', 'jpg', 'jpeg');
+        $extensionesPermitidas = array('png', 'jpg', 'webp');
         $extensionArchivo = pathinfo($nombreArchivoOriginal, PATHINFO_EXTENSION);
     
         if (!in_array(strtolower($extensionArchivo), $extensionesPermitidas)) {
-            echo "Error: Solo se permiten archivos PNG, JPG o JPEG.";
+            echo "Error: Solo se permiten archivos PNG, JPG o WEBP.";
             exit;
         }
     
@@ -62,7 +62,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 imagewebp($imagen, $rutaArchivoWebP, 80);
                 imagedestroy($imagen);
             }
-    
+            
+            $rutaArchivoWebP = 'images/' . $nombreArchivoCargadoWebP;
             $imagenGenerada = $rutaArchivoWebP;
             unlink($directorioCarga . $nombreArchivoOriginal);
         } else {
@@ -94,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 require('../layouts/PHP/head.php');
 \$title = 'InNotesBy ❤ - $nombreArchivo';
 \$description = 'Proyecto de Inbydev para crear Notas!';
-\$othercss = '<link rel=\"stylesheet\" href=\"/layouts/CSS/Notes.css\">';
+\$othercss = '<link rel=\"stylesheet\" href=\"/InNotesBy/layouts/CSS/Notes.css\">';
 head(\$title, \$description, \$othercss);
 ?>
     <?php require('../layouts/PHP/header-notes.php') ?>
