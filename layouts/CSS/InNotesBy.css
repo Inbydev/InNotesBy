@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Regular";
 src:
-  url("/public/FONTS/Dosis-Regular.ttf") format("truetype");
+  url("/InNotesBy/public/FONTS/Dosis-Regular.ttf") format("truetype");
 font-style: normal;
 font-weight: normal;
 font-display: swap;
@@ -10,7 +10,7 @@ font-display: swap;
 @font-face {
 font-family: "Bold";
 src:
-  url("/public/FONTS/Dosis-Bold.ttf") format("truetype");
+  url("/InNotesBy/public/FONTS/Dosis-Bold.ttf") format("truetype");
 font-style: normal;
 font-weight: normal;
 font-display: swap;
@@ -67,6 +67,7 @@ h3 a {
   gap: 3em;
   max-width: 60em;
   margin: auto auto 2em auto;
+  padding: 0 1.4rem;
 }
 
 .guide h3 {
@@ -120,8 +121,8 @@ h2 span:nth-child(1) {
 
 .guide ul li,
 .guide p {
-  font-size: var(--fs-tag);
-  line-height: var(--fs-p);
+  font-size: clamp(1.4rem, 6vw, 2rem);
+  line-height: normal;
   text-align: start;
 }
 
@@ -824,5 +825,18 @@ background-clip: text;
 
   h3 {
     font-size: clamp(100% - 20px, 10vw, 34px);
+  }
+
+  .notas__container {
+    padding: 2rem 0;
+  }
+
+  .notas__container .notas {
+    grid-template-columns: repeat(auto-fill, 8rem);
+    gap: 2rem;
+  }
+
+  .nota {
+    width: 8rem;
   }
 }
