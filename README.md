@@ -37,6 +37,6 @@ Please be advised that any inappropriate content, material intended for mature a
 by
 <a href="https://github.com/Inbydev">Inbydev</a>
 is licensed under
-<a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" style="display:inline-block;">CC BY-SA 4.0
+<a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" style="display:inline-block;">CC BY 4.0
 </a>
 </h3>
