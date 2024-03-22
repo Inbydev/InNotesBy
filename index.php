@@ -2,10 +2,10 @@
 require('layouts/PHP/head.php');
 $title = 'InNotesBy ❤';
 $description = 'Proyecto de Inbydev para crear Notas!';
-$headerjs = '<script defer src="/layouts/JS/header__notes.js"></script>';
-$otherjs = '<script defer src="/layouts/JS/app.js"></script>
-<script src="/layouts/JS/exclude__characters.js"></script>';
-$othercss = '<link rel="stylesheet" href="/layouts/CSS/InNotesBy.css">';
+$headerjs = '<script defer src="/InNotesBy/layouts/JS/header__notes.js"></script>';
+$otherjs = '<script defer src="/InNotesBy/layouts/JS/app.js"></script>
+<script src="/InNotesBy/layouts/JS/exclude__characters.js"></script>';
+$othercss = '<link rel="stylesheet" href="/InNotesBy/layouts/CSS/InNotesBy.css">';
 head($title, $description, $headerjs, $otherjs, $othercss);
 ?>
 	<?php require('layouts/PHP/header.php') ?>
@@ -64,7 +64,7 @@ head($title, $description, $headerjs, $otherjs, $othercss);
                 by
                 <a href="https://github.com/Inbydev">Inbydev</a>
                 is licensed under
-                <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" style="display:inline-block;">CC BY-SA 4.0
+                <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" style="display:inline-block;">CC BY 4.0
                 </a>
             </p>
         </footer>
@@ -135,10 +135,10 @@ head($title, $description, $headerjs, $otherjs, $othercss);
     
 	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-	<script src="/layouts/JS/word.js"></script>
-	<script src="/layouts/JS/loader.js"></script>
-    <script src="/layouts/JS/context__menu.js"></script>
-    <script src="/layouts/JS/preview__mode.js"></script>
+	<script src="layouts/JS/word.js"></script>
+	<script src="layouts/JS/loader.js"></script>
+    <script src="layouts/JS/context__menu.js"></script>
+    <script src="layouts/JS/preview__mode.js"></script>
     <script>
         const spanElement = document.querySelector('.size-span');
 
