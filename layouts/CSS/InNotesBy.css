@@ -18,7 +18,7 @@ font-display: swap;
 
 
 .header__mobile .header__mobile__items .header__mobile__link .header__mobile__logo:hover {
-  background-position-x: -280px;
+  background-position-x: -250px;
 }
 
 .header__box .header__items .header__link .header__logo:hover {
@@ -187,11 +187,12 @@ form {
 
 .header__create__note {
   width: 100%;
-  height: 11dvh;
+  height: 11vh;
   background: var(--background-header);
   position: fixed;
   inset: 0;
   z-index: 1;
+  min-height: 6rem;
 }
 
 .header__create__note .note__navigation {
@@ -294,7 +295,7 @@ form {
   color: #FFFFFF;
   cursor: pointer;
   transition: var(--f-h-s);
-  height: 2.4rem;
+  height: clamp(1.6rem, 8vw, 2.4rem);
   aspect-ratio: 1;
   display: flex;
   justify-content: center;
@@ -302,7 +303,7 @@ form {
 }
 
 .markdown__navigation .markdown__button svg {
-  min-width: 2.4rem;
+  min-width: clamp(1.6rem, 8vw, 2.4rem);
 }
 
 .markdown__navigation .markdown__button.active {
@@ -330,7 +331,7 @@ form {
 
 
 .form__input {
-  width: 100%;
+  width: 80%;
   background: none;
   color: var(--primary-text);
   font-size: 1rem;
@@ -345,7 +346,7 @@ form {
 
 .form__section {
   min-height: 100dvh;
-  padding: 12dvh 1rem 4dvh 1rem;
+  padding: 6rem 1rem 4dvh 1rem;
   margin: auto;
   display: flex;
   align-content: center;
