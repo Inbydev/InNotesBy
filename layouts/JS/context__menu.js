@@ -59,7 +59,7 @@ function showContextMenu(event, archivo) {
         contextMenu.style.transform = 'translateY(0)';
     }, 10);
 
-    contextMenu.dataset.enlace = window.location.origin + '/' + archivo;
+    contextMenu.dataset.enlace = window.location.origin + '/InNotesBy/' + archivo;
 
     document.addEventListener('click', closeContextMenu);
 }

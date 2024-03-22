@@ -2,7 +2,7 @@
 require('../layouts/PHP/head.php');
 $title = 'InNotesBy ❤ - Mona';
 $description = 'Proyecto de Inbydev para crear Notas!';
-$othercss = '<link rel="stylesheet" href="/layouts/CSS/Notes.css">';
+$othercss = '<link rel="stylesheet" href="/InNotesBy/layouts/CSS/Notes.css">';
 head($title, $description, $othercss);
 ?>
 
@@ -18,7 +18,7 @@ head($title, $description, $othercss);
 ## muy
 ### lindos
 </p>
-        <img src="/notas/images/64d2ff295c8bc_DRUY7SWCC5GMTDX32MFC3APNX4.jpg"> 
+        <img src="images/64d2ff295c8bc_DRUY7SWCC5GMTDX32MFC3APNX4.jpg"> 
     </section>
 
     <?php require('../layouts/PHP/scripts.php') ?>

@@ -2,7 +2,7 @@
 require('../layouts/PHP/head.php');
 $title = 'InNotesBy ❤ - Existencialismo y Fundamentos de la Moral';
 $description = 'Proyecto de Inbydev para crear Notas!';
-$othercss = '<link rel="stylesheet" href="/layouts/CSS/Notes.css">';
+$othercss = '<link rel="stylesheet" href="/InNotesBy/layouts/CSS/Notes.css">';
 head($title, $description, $othercss);
 ?>
     <?php require('../layouts/PHP/header-notes.php') ?>
@@ -89,7 +89,7 @@ Todas las relaciones se forman por algún motivo, como un intercambio o para sat
 
 Cuando falta uno de estos fundamentos, la norma se debilita y puede desaparecer con el tiempo. Pero si sigue manteniendo todos estos, entonces permanecerá vigente a lo largo del tiempo.
 </p>
-        <img src="">
+        <img src="images/65c1b38ab25fc_64d1b0b5abf6e_e4cc03fa37be34c26911c0dbf780fd67.webp">
     </section>
 
     <?php require('../layouts/PHP/scripts.php') ?>

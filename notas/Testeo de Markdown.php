@@ -2,7 +2,7 @@
 require('../layouts/PHP/head.php');
 $title = 'InNotesBy ❤ - Testeo de Markdown';
 $description = 'Proyecto de Inbydev para crear Notas!';
-$othercss = '<link rel="stylesheet" href="/layouts/CSS/Notes.css">';
+$othercss = '<link rel="stylesheet" href="/InNotesBy/layouts/CSS/Notes.css">';
 head($title, $description, $othercss);
 ?>
     <?php require('../layouts/PHP/header-notes.php') ?>
