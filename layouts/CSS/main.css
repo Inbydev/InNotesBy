@@ -5,32 +5,20 @@
 }
 
 @font-face {
-    font-family: Concert One;
-    src: url(/_astro/ConcertOne-Regular.fdllKXay.woff2) format("woff2"), url(/_astro/ConcertOne-Regular.tHDN6JqC.woff) format("woff"), url(/_astro/ConcertOne-Regular.RofmboGv.ttf) format("truetype");
+    font-family: "Concert One";
+    src: url("/InNotesBy/public/FONTS/ConcertOne-Regular.woff2") format("woff2"),
+         url("/InNotesBy/public/FONTS/ConcertOne-Regular.woff") format("woff"),
+         url("/InNotesBy/public/FONTS/ConcertOne-Regular.ttf") format("truetype");
     font-style: normal;
     font-weight: 100;
     font-display: swap;
 }
 
 @font-face {
-    font-family: RubikDoodleShadow;
-    src: url(/_astro/RubikDoodleShadow-Regular.qyonhK3v.woff2) format("woff2"), url(/_astro/RubikDoodleShadow-Regular.ruJKbOm5.woff) format("woff"), url(/_astro/RubikDoodleShadow-Regular.C6hoDpKg.ttf) format("truetype");
-    font-style: normal;
-    font-weight: 100;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: Shizuru;
-    src: url(/_astro/Shizuru-Regular.6xS-z-2-.woff2) format("woff2"), url(/_astro/Shizuru-Regular._nuhFOU3.woff) format("woff"), url(/_astro/Shizuru-Regular.bg3CCAGw.ttf) format("truetype");
-    font-style: normal;
-    font-weight: 100;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: Single Day;
-    src: url(/_astro/SingleDay-Regular.m7eMEhKo.woff2) format("woff2"), url(/_astro/SingleDay-Regular.T-EYUhFf.woff) format("woff"), url(/_astro/SingleDay-Regular.EiPPhgWI.ttf) format("truetype");
+    font-family: "RubikDoodleShadow";
+    src: url("/InNotesBy/public/FONTS/RubikDoodleShadow-Regular.woff2") format("woff2"),
+         url("/InNotesBy/public/FONTS/RubikDoodleShadow-Regular.woff") format("woff"),
+         url("/InNotesBy/public/FONTS/RubikDoodleShadow-Regular.ttf") format("truetype");
     font-style: normal;
     font-weight: 100;
     font-display: swap;
@@ -192,7 +180,7 @@ a:visited {
 
 h1 {
     font-size: clamp(100% - 0.125rem, 28vw, 12rem);
-    font-family: RubikDoodleShadow;
+    font-family: "RubikDoodleShadow";
     margin: 0;
     padding: 15px 15px 30px 30px;
     background: linear-gradient(to right, var(--primary-text), var(--secondary-text));
@@ -289,7 +277,7 @@ section {
 
 .header__box .header__items .header__link .header__logo {
     font-size: 70px;
-    font-family: RubikDoodleShadow;
+    font-family: "RubikDoodleShadow";
     background: linear-gradient(to right, var(--primary-text), var(--secondary-text), var(--tertiary-text));
     -webkit-background-clip: text;
     background-clip: text;
@@ -349,7 +337,7 @@ section {
 
 .header__mobile .header__mobile__items .header__mobile__link .header__mobile__logo {
     font-size: 2.6rem;
-    font-family: RubikDoodleShadow;
+    font-family: "RubikDoodleShadow";
     padding-bottom: 5px;
     background: linear-gradient(to right, var(--hover), var(--secondary-text), var(--tertiary-text));
     -webkit-background-clip: text;

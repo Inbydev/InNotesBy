@@ -16,7 +16,7 @@ function head($title, $description, $othercss = null, $headerjs = null, $otherjs
 	<meta property="og:description" content="$description">
 	<link rel="icon" href="/InNotesBy/Images/icono.ico">
 	<title>$title</title>
-	<link rel="stylesheet" href="/_astro/index.nnolrKzu.css">
+	<link rel="stylesheet" href="/InNotesBy/layouts/CSS/main.css">
 	$othercss
 	$headerjs
 	$otherjs
