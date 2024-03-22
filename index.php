@@ -59,7 +59,6 @@ head($title, $description, $headerjs, $otherjs, $othercss);
         </section>
 
         <footer>
-<<<<<<< HEAD
             <p>
                 <a href="https://github.com/Inbydev/Inby.dev">InNotesBy</a> © 2023 - 2024
                 by
@@ -68,16 +67,6 @@ head($title, $description, $headerjs, $otherjs, $othercss);
                 <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" style="display:inline-block;">CC BY 4.0
                 </a>
             </p>
-=======
-		<p>
-			<a href="https://github.com/Inbydev/Inby.dev">InNotesBy</a> © 2023 - 2024
-			by
-			<a href="https://github.com/Inbydev">Inbydev</a>
-			is licensed under
-			<a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" style="display:inline-block;">CC BY 4.0
-			</a>
-		</p>
->>>>>>> 392fa22812f2e44bc9e28c67b1d21f284d0b69ff
         </footer>
     </main>
     
