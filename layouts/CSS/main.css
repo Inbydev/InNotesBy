@@ -6,9 +6,9 @@
 
 @font-face {
     font-family: "Concert One";
-    src: url("/InNotesBy/public/FONTS/ConcertOne-Regular.woff2") format("woff2"),
-         url("/InNotesBy/public/FONTS/ConcertOne-Regular.woff") format("woff"),
-         url("/InNotesBy/public/FONTS/ConcertOne-Regular.ttf") format("truetype");
+    src: url("/InNotesBy/Fonts/ConcertOne-Regular.woff2") format("woff2"),
+         url("/InNotesBy/Fonts/public/FONTS/ConcertOne-Regular.woff") format("woff"),
+         url("/InNotesBy/Fonts/public/FONTS/ConcertOne-Regular.ttf") format("truetype");
     font-style: normal;
     font-weight: 100;
     font-display: swap;
@@ -16,9 +16,9 @@
 
 @font-face {
     font-family: "RubikDoodleShadow";
-    src: url("/InNotesBy/public/FONTS/RubikDoodleShadow-Regular.woff2") format("woff2"),
-         url("/InNotesBy/public/FONTS/RubikDoodleShadow-Regular.woff") format("woff"),
-         url("/InNotesBy/public/FONTS/RubikDoodleShadow-Regular.ttf") format("truetype");
+    src: url("/InNotesBy/Fonts/RubikDoodleShadow-Regular.woff2") format("woff2"),
+         url("/InNotesBy/Fonts/RubikDoodleShadow-Regular.woff") format("woff"),
+         url("/InNotesBy/Fonts/RubikDoodleShadow-Regular.ttf") format("truetype");
     font-style: normal;
     font-weight: 100;
     font-display: swap;
