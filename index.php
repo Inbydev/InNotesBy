@@ -4,8 +4,8 @@ $title = 'InNotesBy ❤';
 $description = 'Proyecto de Inbydev para crear Notas!';
 $headerjs = '<script defer src="/InNotesBy/layouts/JS/header__notes.js"></script>';
 $otherjs = '
-<script defer src="/layouts/JS/app.js"></script>
-<script src="/layouts/JS/exclude__characters.js"></script>
+<script defer src="/InNotesBy/layouts/JS/app.js"></script>
+<script src="/InNotesBy/layouts/JS/exclude__characters.js"></script>
 ';
 $othercss = '<link rel="stylesheet" href="/InNotesBy/layouts/CSS/InNotesBy.css">';
 head($title, $description, $headerjs, $otherjs, $othercss);
