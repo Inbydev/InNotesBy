@@ -24,6 +24,9 @@ To contribute to this project, you can:
 
 Your contributions and efforts to improve InNotesBy are very appreciated!
 
+## Fork
+
+When you are going to do a fork, make sure you have the project called "InNotesBy" inside a folder and run it on the folder (because later goes to production)
 
 ## Warning: Inappropriate Content Policy
 
