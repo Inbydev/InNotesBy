@@ -1,7 +1,7 @@
 @font-face {
     font-family: "Regular";
   src:
-    url("/InNotesBy/public/FONTS/Dosis-Regular.ttf") format("truetype");
+    url("/InNotesBy/Fonts/Dosis-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
   font-display: swap;
@@ -10,7 +10,7 @@
   @font-face {
   font-family: "Bold";
   src:
-    url("/InNotesBy/public/FONTS/Dosis-Bold.ttf") format("truetype");
+    url("/InNotesBy/Fonts/Dosis-Bold.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
   font-display: swap;
