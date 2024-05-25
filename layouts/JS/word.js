@@ -6,6 +6,13 @@ text.addEventListener("input", function () {
     this.style.overflowY = this.scrollHeight > 38 * 16 ? "auto" : "hidden";
 });
 
+const spanElement = document.querySelector('.size-span');
+
+function updateChange(event) {
+    const value = event.target.value;
+    spanElement.innerText = value;
+}
+
 function bodyHidden() {
     document.body.classList.add("hidden");
 }

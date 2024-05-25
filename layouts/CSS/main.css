@@ -312,28 +312,26 @@ footer a {
 
 .guide {
     gap: 3em;
-    max-width: 60em;
+    max-width: 60rem;
     margin: auto auto 2em auto;
-    padding: 0 1.4rem;
+    padding: 0 3rem;
     font-size: 1rem;
+}
+
+.guide h3 {
+    max-width: 24ch;
+    font-family: "Mali Bold";
 }
 
 .guide h3 {
     background: linear-gradient(to right, #c08bfd, #fca6fd);
 }
 
-.guide h3.two {
+.guide h3.other__gradient {
     background: linear-gradient(to right, #87cafa, #878cfa);
 }
 
 .guide h3,
-.guide h3.two {
-    max-width: 24ch;
-    font-family: "Mali Bold";
-}
-
-.guide h3,
-.guide h3.two,
 h1 span {
     -webkit-background-clip: text;
     background-clip: text;
@@ -343,17 +341,20 @@ h1 span {
     text-wrap: balance;
 }
 
-.guide ul {
-    display: grid;
-    gap: 2em;
-    padding-left: 2em;
+.guide > p,
+.guide > ul {
+    width: 100%;
 }
 
-.guide * span {
-    color: var(--secondary-text)
+.guide ul li,
+.guide p {
+    font-size: clamp(1rem, 4vw, 1.3rem);
+    line-height: 1.4em;
+    text-align: start;
 }
 
 .guide ul li {
+    margin-bottom: 2rem;
     color: var(--primary-text);
     list-style-position: inside;
 }
@@ -362,12 +363,8 @@ h1 span {
     cursor: pointer;
 }
 
-.guide ul li,
-.guide p {
-    font-size: clamp(1rem, 4vw, 1.3rem);
-    max-width: 60ch;
-    line-height: 1.4em;
-    text-align: start;
+.guide * span {
+    color: var(--secondary-text)
 }
 
 .guide__background__text span:nth-child(2) {

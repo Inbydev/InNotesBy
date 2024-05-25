@@ -23,7 +23,7 @@ head($title, $description, $otherjs);
             <h3>Paso 1: Crear una Nueva Nota</h3>
             <p>Presiona el botón <span>Crear Nota</span> para comenzar.</p>
 
-            <h3 class="two">Paso 2: Ingresar Datos de la Nota</h3>
+            <h3 class="other__gradient">Paso 2: Ingresar Datos de la Nota</h3>
             <p>
                 Ya dentro, verás un formulario con una barra de botones de navegación y más abajo
                 verás un cuadrado donde irá el contenido de la nota, para ingresar información general
@@ -49,7 +49,7 @@ head($title, $description, $otherjs);
                 <li>Diferentes tamaños de título</li>
                 <li><a>Links</a></li>
                 <li><code>Bloques de código</code></li>
-                <li>Agregar una imagen al contenido <span><i>(opcional, múltiples imágenes dentro del contenido próximamente).</i></span></li>
+                <li>Agregar una imagen al final del contenido <span><i>(opcional).</i></span></li>
             </ul>
 
             <h3>Paso 4: Guardar o Cerrar la Nota</h3>
@@ -57,7 +57,7 @@ head($title, $description, $otherjs);
             <p>Una vez que hayas terminado de crear tu nota, puedes presionar el botón <span>Crear Nota</span> para almacenar la nota en InNotesBy.
                 Si deseas continuar trabajando en la nota más tarde, puedes cerrarla presionando el botón <span>Cerrar</span>. <span><i>(próximamente estará la función de guardar automáticamente, actualmente no está esa funcionalidad)</i></span></p>
 
-            <h3 class="two">Recuerda!</h3>
+            <h3 class="other__gradient">Recuerda!</h3>
 
             <p>El <span>nombre de la nota</span> no puede contener <span>carácteres especiales</span>!</p>
         </section>
@@ -143,13 +143,5 @@ head($title, $description, $otherjs);
 	<script src="layouts/JS/loader.js"></script>
     <script src="layouts/JS/context__menu.js"></script>
     <script src="layouts/JS/preview__mode.js"></script>
-    <script>
-        const spanElement = document.querySelector('.size-span');
-
-        function updateChange(event) {
-            const value = event.target.value;
-            spanElement.innerText = value;
-        }
-    </script>
 </body>
 </html>
