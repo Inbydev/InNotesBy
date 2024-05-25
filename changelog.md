@@ -5,28 +5,28 @@ All notable changes to this project will be documented in this file.
 #### v1.0.1
 > 25 May 2024
 
-- Replaced fonts: Concert One and Dosis to REM, RubikDoodleShadow to Mali and added FiraCode font for Code.
-- Fonts in folders: To be more organized and to have the licenses with their respective fonts.
-- Header: Removed having to scroll down to display the header.
-- Mobile Header: Removed and replaced by the original Header.
-- Replaced icons: Replaced ionicons for svg icons.
-- index.php: modified for better readability.
-- Removed the header scripts of all files.
-- Merge to InSuccessBy.css to main.css.
-- main.css formatted with comments and in order for better readability.
-- Added notification and appears after copy a Note link.
-- Guide: formatted a bit for better understanding.
-- Changed the button to create notes to the header for better look.
-- Changed theme-color to #180222.
-- Renamed icono.ico to favicon.ico.
-- Background div's renamed for more readability on the lines of html and css.
-- Added changelog.
+- Replaced fonts: Concert One and Dosis to REM, RubikDoodleShadow to Mali and added FiraCode font for Code. [`commit 6894983`](https://github.com/Inbydev/InNotesBy/commit/6894983ec6b22d5fd6e3cd4c113b84f2a41e2882), [`commit c40002f`](https://github.com/Inbydev/InNotesBy/commit/c40002f45bfb6968cae289deefd96a678eb882b5)
+- Fonts in folders: To be more organized and to have the licenses with their respective fonts. [`commit 6894983`](https://github.com/Inbydev/InNotesBy/commit/6894983ec6b22d5fd6e3cd4c113b84f2a41e2882), [`commit ba205c9`](https://github.com/Inbydev/InNotesBy/commit/ba205c9ed03046f21002b01ad13eac55177a7bf9)
+- Header: Removed having to scroll down to display the header. [`commit cb87087`](https://github.com/Inbydev/InNotesBy/commit/cb87087fe45fce41ea02fc80849210585525e1e0)
+- Mobile Header: Removed and replaced by the original Header. [`commit cb87087`](https://github.com/Inbydev/InNotesBy/commit/cb87087fe45fce41ea02fc80849210585525e1e0)
+- Replaced icons: Replaced ionicons for svg icons. [`commit cb87087`](https://github.com/Inbydev/InNotesBy/commit/cb87087fe45fce41ea02fc80849210585525e1e0), [`commit f15ff8c`](https://github.com/Inbydev/InNotesBy/commit/f15ff8c1871d89682e0fbafa126a23a790f94d05)
+- index.php: modified for better readability. [`commit df04e50`](https://github.com/Inbydev/InNotesBy/commit/df04e50b4111c3fac827e16887cddd239daec624)
+- Removed the header scripts of all files. [`commit df04e50`](https://github.com/Inbydev/InNotesBy/commit/df04e50b4111c3fac827e16887cddd239daec624)
+- Merge to InSuccessBy.css to main.css. [`commit 626f751`](https://github.com/Inbydev/InNotesBy/commit/626f75113bc66ac105f250f037c3373e789354f9)
+- main.css formatted with comments and in order for better readability. [`commit e2b3774`](https://github.com/Inbydev/InNotesBy/commit/e2b37749e76cff45f9917c0e8ab6cc5cf8bca81d)
+- Added notification and appears after copy a Note link. [`commit ae863d1`](https://github.com/Inbydev/InNotesBy/commit/ae863d1ca64a9fb771b0aaa141d80f73d895c5c2)
+- Guide: formatted a bit for better understanding. [`commit df04e50`](https://github.com/Inbydev/InNotesBy/commit/df04e50b4111c3fac827e16887cddd239daec624)
+- Changed the button to create notes to the header for better look. [`commit df04e50`](https://github.com/Inbydev/InNotesBy/commit/df04e50b4111c3fac827e16887cddd239daec624), [`commit cb87087`](https://github.com/Inbydev/InNotesBy/commit/cb87087fe45fce41ea02fc80849210585525e1e0)
+- Changed theme-color to #180222. [`commit 1512b92`](https://github.com/Inbydev/InNotesBy/commit/1512b92df3c153297994c4dd35ad4592211385a5)
+- Renamed icono.ico to favicon.ico. [`commit cbc46ba`](https://github.com/Inbydev/InNotesBy/commit/cbc46ba1bda4bf06d1ae958e9f80bf117b6ec968)
+- Background div's renamed for more readability on the lines of html and css. [`commit 1512b92`](https://github.com/Inbydev/InNotesBy/commit/1512b92df3c153297994c4dd35ad4592211385a5)
+- Added changelog. [`commit `]()
 
 
 #### v1.0.0
-> 11 March 2024
+> 20 January 2024
 
-- Innitial Commit
+- Innitial Commit [`commit 85ef020`](https://github.com/Inbydev/InNotesBy/commit/85ef020c237224e3523a9412b09cef16def566dd)
 - Changed colors
 - Rennamed the project to "InNotesBy"
 - (Inbydev: I don't remember much about the things I changed here, the changelog was added in version 1.0.1)
