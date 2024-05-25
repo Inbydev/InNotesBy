@@ -2,8 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
-#### v1.0.1
+#### v1.0.2
 > 25 May 2024
+- Added README on spanish and added the link on the original README [`commit 9f20108`](https://github.com/Inbydev/InNotesBy/commit/9f20108fbac85f0dadd3e24ee863887ff152a6d5)
+- Changed the class name from **h3** with class **two** to **h3** with class **other__gradient** for better clarity. [`commit 44ad1fc`](https://github.com/Inbydev/InNotesBy/commit/44ad1fc84650adf55bd4445036d605fdb04bbb65)
+- Moved the script from index.php to word.js for better organization. [`commit 44ad1fc`](https://github.com/Inbydev/InNotesBy/commit/44ad1fc84650adf55bd4445036d605fdb04bbb65)
+- Fixed the CSS lines of the guide to have more organized and concise code. [`commit 44ad1fc`](https://github.com/Inbydev/InNotesBy/commit/44ad1fc84650adf55bd4445036d605fdb04bbb65)
+
+#### v1.0.1
+> 24 May 2024
 
 - Replaced fonts: Concert One and Dosis to REM, RubikDoodleShadow to Mali and added FiraCode font for Code. [`commit 6894983`](https://github.com/Inbydev/InNotesBy/commit/6894983ec6b22d5fd6e3cd4c113b84f2a41e2882), [`commit c40002f`](https://github.com/Inbydev/InNotesBy/commit/c40002f45bfb6968cae289deefd96a678eb882b5), [`commit e2b3774`](https://github.com/Inbydev/InNotesBy/commit/e2b37749e76cff45f9917c0e8ab6cc5cf8bca81d)
 - Fonts in folders: To be more organized and to have the licenses with their respective fonts. [`commit 6894983`](https://github.com/Inbydev/InNotesBy/commit/6894983ec6b22d5fd6e3cd4c113b84f2a41e2882), [`commit ba205c9`](https://github.com/Inbydev/InNotesBy/commit/ba205c9ed03046f21002b01ad13eac55177a7bf9)
