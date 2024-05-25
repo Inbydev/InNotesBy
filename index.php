@@ -28,6 +28,7 @@
         </section>
 
         <section class="guide detector" id="guide">
+            <!-- TODO: Improve the redaction of this section and provide an English translation -->
             <h3>Paso 1: Crear una Nueva Nota</h3>
             <p>Presiona el botón <span>Crear Nota</span> para comenzar.</p>
 
