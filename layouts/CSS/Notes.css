@@ -1,34 +1,50 @@
 @font-face {
-    font-family: "Regular";
-  src:
-    url("/InNotesBy/Fonts/Dosis-Regular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-  font-display: swap;
+    font-family: "REM";
+    src: url("/InNotesBy/Fonts/REM/REM-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
 }
-  
-  @font-face {
-  font-family: "Bold";
-  src:
-    url("/InNotesBy/Fonts/Dosis-Bold.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-  font-display: swap;
+
+@font-face {
+    font-family: "REM Medium";
+    src: url("/InNotesBy/Fonts/REM/REM-Medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "FiraCode";
+    src: url("/InNotesBy/Fonts/FiraCode/FiraCode-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
 }
 
 .wordarchive {
-  min-height: calc(100dvh - 2.2em);
-  padding: 12dvh 1rem 4dvh 1rem;
-  margin: auto;
-  display: flex;
-  align-content: start;
-  flex-direction: column;
-  width: 100%;
-  max-width: 80rem;
-  background: rgba(45, 5, 71, 0.1);
+    min-height: calc(100dvh - 2.2em);
+    padding: 6dvh 1rem 4dvh 1rem;
+    margin: auto;
+    display: flex;
+    align-content: start;
+    flex-direction: column;
+    width: 100%;
+    max-width: 80rem;
+    background: rgba(45, 5, 71, 0.1);
 }
 
-.wordarchive .markdown__container h1,h2,h3,h4,h5,h6,i,b,strike,pre,p {
+.wordarchive .markdown__container h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+b,
+strike,
+pre,
+p {
     position: static;
     padding: 20px 0;
     text-align: start;
@@ -43,7 +59,7 @@
     width: 70svw;
     max-width: 900px;
     text-align: start;
-    font-family: "Regular";
+    font-family: "REM";
     text-wrap: balance;
     font-size: clamp(1.2rem, 6vw, 1.8rem);
     line-height: clamp(1.8rem, 6vw, 2.4rem);
@@ -54,7 +70,7 @@
 .wordarchive .markdown__container pre {
     background: 0 0;
     text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    font-family: "FiraCode", monospace;
     color: var(--primary-text);
     font-size: 1rem;
     text-align: left;
@@ -73,12 +89,12 @@
 }
 
 .wordarchive .markdown__container code span {
-  color: #878cfa;
+    color: #878cfa;
 }
 
 .wordarchive .markdown__container pre {
     width: 70svw;
-    max-width: 500px;
+    max-width: 38rem;
     padding: 1rem;
     margin: 2.5rem auto;
     overflow: auto;
@@ -86,24 +102,24 @@
     border: 2px solid rgba(241, 215, 253, .8);
 }
 
-.wordarchive .markdown__container :not(pre) > code,
+.wordarchive .markdown__container :not(pre)>code,
 .wordarchive .markdown__container pre {
     background: rgba(0, 0, 0, .4);
 }
 
-.wordarchive .markdown__container :not(pre) > code {
+.wordarchive .markdown__container :not(pre)>code {
     padding: 0.1em;
     border-radius: 0.3em;
     white-space: normal;
 }
 
 .wordarchive .markdown__container b {
-    font-family: "Bold";
+    font-family: "REM Medium";
 }
 
 .wordarchive .markdown__container br::before {
     content: "↵";
-    display: block; 
+    display: block;
     position: absolute;
     top: -1em;
     right: 0;
@@ -111,21 +127,21 @@
 }
 
 .wordarchive h1 {
-  font-size: clamp(2.6rem, 8vw, 5rem);
-  line-height: clamp(3.8rem, 10vw, 6rem);
-  text-align: center;
-  margin: 0;
-  padding: 1rem 0;
+    font-size: clamp(2.6rem, 8vw, 5rem);
+    line-height: clamp(3.8rem, 10vw, 6rem);
+    text-align: center;
+    margin: 0;
+    padding: 1rem 0;
 }
 
 .wordarchive .autor {
-  font-size: clamp(1.8rem, 6vw, 3.4rem);
-  line-height: clamp(2.4rem, 6vw, 4.2rem);
-  font-style: italic;
-  font-family: "Bold";
-  max-width: 26rem;
-  padding: 0;
-  margin: 0;
+    font-size: clamp(1.8rem, 6vw, 3.4rem);
+    line-height: clamp(2.4rem, 6vw, 4.2rem);
+    font-style: italic;
+    font-family: "REM Medium";
+    max-width: 26rem;
+    padding: 0;
+    margin: 0;
 }
 
 .wordarchive .markdown__container h2,
@@ -133,32 +149,32 @@
 .wordarchive .markdown__container h4,
 .wordarchive .markdown__container h5,
 .wordarchive .markdown__container h6 {
-  margin: 0;
+    margin: 0;
 }
 
 .wordarchive .markdown__container h2 {
-  font-size: clamp(2.6rem, 6vw, 4rem);
-  line-height: clamp(3.2rem, 6vw, 4.4rem);
+    font-size: clamp(2.6rem, 6vw, 4rem);
+    line-height: clamp(3.2rem, 6vw, 4.4rem);
 }
 
 .wordarchive .markdown__container h3 {
-  font-size: clamp(2.4rem, 6vw, 3.6rem);
-  line-height: clamp(2.8rem, 6vw, 4rem);
+    font-size: clamp(2.4rem, 6vw, 3.6rem);
+    line-height: clamp(2.8rem, 6vw, 4rem);
 }
 
 .wordarchive .markdown__container h4 {
-  font-size: clamp(2rem, 6vw, 3.2rem);
-  line-height: clamp(2.4rem, 6vw, 3.6rem);
+    font-size: clamp(2rem, 6vw, 3.2rem);
+    line-height: clamp(2.4rem, 6vw, 3.6rem);
 }
 
 .wordarchive .markdown__container h5 {
-  font-size: clamp(1.6rem, 6vw, 2.8rem);
-  line-height: clamp(2rem, 6vw, 3.2rem);
+    font-size: clamp(1.6rem, 6vw, 2.8rem);
+    line-height: clamp(2rem, 6vw, 3.2rem);
 }
 
 .wordarchive .markdown__container h6 {
-  font-size: clamp(1.2rem, 6vw, 2.4rem);
-  line-height: clamp(1.6rem, 6vw, 2.8rem);
+    font-size: clamp(1.2rem, 6vw, 2.4rem);
+    line-height: clamp(1.6rem, 6vw, 2.8rem);
 }
 
 .wordarchive img {
@@ -167,11 +183,8 @@
 }
 
 @media (max-width: 800px) {
-    .wordarchive {
-        padding: 1rem 1rem 4dvh 1rem;
-    }
-
-    .wordarchive .markdown__container {
+    .wordarchive .markdown__container,
+    .wordarchive .markdown__container pre {
         width: 96dvw;
     }
 }
