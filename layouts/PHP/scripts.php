@@ -8,10 +8,11 @@
 			</a>
 		</p>
 	</footer>
+
+	<div id="notification">Enlace copiado al portapapeles</div>
     
     <script src="/InNotesBy/layouts/JS/loader.js"></script>
-	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	<script src="/InNotesBy/layouts/JS/copy__link.js"></script>
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
 			const paragraph = document.querySelector('.markdown__container');
