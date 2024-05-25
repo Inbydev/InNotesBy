@@ -13,7 +13,7 @@
   
 </div>
 
-Lee esto en otros idiomas: [🇬🇧 🇺🇸](./README.md)
+Lee esto en otros idiomas: [🇬🇧 🇺🇸](/README.md)
 
 ## Sobre este proyecto
 
