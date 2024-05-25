@@ -51,7 +51,7 @@ function showContextMenu(event, archivo) {
     var mouseY = event.clientY + window.scrollY;
 
     contextMenu.style.left = mouseX + 10 + 'px';
-    contextMenu.style.top = mouseY - 540 + 'px';
+    contextMenu.style.top = mouseY - 400 + 'px';
 
     setTimeout(function () {
         contextMenu.style.transition = 'opacity 0.2s ease-in-out, transform 0.2s ease-in-out';
@@ -90,4 +90,14 @@ function copyLink() {
     document.body.removeChild(tempInput);
 
     closeContextMenu();
+    showNotification();
+}
+
+function showNotification() {
+    const notification = document.getElementById('notification');
+    notification.classList.add('show__notification');
+
+    setTimeout(() => {
+        notification.classList.remove('show__notification');
+    }, 3000);
 }
