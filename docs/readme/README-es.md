@@ -49,7 +49,7 @@ Cuando vayas a hacer un fork, asegúrate de tener el proyecto llamado "InNotesBy
 Ten en cuenta que cualquier contenido inapropiado, material destinado a audiencias maduras (18+) o intentos de comprometer la integridad de InNotesBy serán eliminados de inmediato y/o estarán sujetos a análisis para la mejora continua de InNotesBy.
 
 
-## License
+## Licencia
 
 <h3>
 <a href="https://github.com/Inbydev/InNotesBy">InNotesBy</a> © 2023 - 2024
