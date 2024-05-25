@@ -64,7 +64,7 @@
             <h3>Paso 4: Guardar o Cerrar la Nota</h3>
 
             <p>Una vez que hayas terminado de crear tu nota, puedes presionar el botón <span>Crear Nota</span> para almacenar la nota en InNotesBy.
-                Si deseas continuar trabajando en la nota más tarde, puedes cerrarla presionando el botón <span>Cerrar</span>. <span><i>(próximamente estará la función de guardar automáticamente, actualmente no está esa funcionalidad)</i></span></p>
+                Si deseas continuar trabajando en la nota más tarde, puedes cerrarla presionando el botón <span>Cerrar</span> o presionando la tecla <span>Escape</span>. <span><i>(próximamente estará la función de guardar automáticamente, actualmente no está esa funcionalidad)</i></span></p>
 
             <h3 class="other__gradient">Recuerda!</h3>
 

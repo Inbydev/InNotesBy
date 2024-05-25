@@ -363,6 +363,10 @@ h1 span {
     list-style-position: inside;
 }
 
+.guide ul li pre {
+    font-family: "FireCode", monospace;
+}
+
 .guide ul li a {
     cursor: pointer;
 }
