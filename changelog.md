@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 #### v1.0.1
 > 25 May 2024
 
-- Replaced fonts: Concert One and Dosis to REM, RubikDoodleShadow to Mali and added FiraCode font for Code. [`commit 6894983`](https://github.com/Inbydev/InNotesBy/commit/6894983ec6b22d5fd6e3cd4c113b84f2a41e2882), [`commit c40002f`](https://github.com/Inbydev/InNotesBy/commit/c40002f45bfb6968cae289deefd96a678eb882b5)
+- Replaced fonts: Concert One and Dosis to REM, RubikDoodleShadow to Mali and added FiraCode font for Code. [`commit 6894983`](https://github.com/Inbydev/InNotesBy/commit/6894983ec6b22d5fd6e3cd4c113b84f2a41e2882), [`commit c40002f`](https://github.com/Inbydev/InNotesBy/commit/c40002f45bfb6968cae289deefd96a678eb882b5), [`commit e2b3774`](https://github.com/Inbydev/InNotesBy/commit/e2b37749e76cff45f9917c0e8ab6cc5cf8bca81d)
 - Fonts in folders: To be more organized and to have the licenses with their respective fonts. [`commit 6894983`](https://github.com/Inbydev/InNotesBy/commit/6894983ec6b22d5fd6e3cd4c113b84f2a41e2882), [`commit ba205c9`](https://github.com/Inbydev/InNotesBy/commit/ba205c9ed03046f21002b01ad13eac55177a7bf9)
 - Header: Removed having to scroll down to display the header. [`commit cb87087`](https://github.com/Inbydev/InNotesBy/commit/cb87087fe45fce41ea02fc80849210585525e1e0)
 - Mobile Header: Removed and replaced by the original Header. [`commit cb87087`](https://github.com/Inbydev/InNotesBy/commit/cb87087fe45fce41ea02fc80849210585525e1e0)
