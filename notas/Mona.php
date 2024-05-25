@@ -12,8 +12,6 @@
     head($title, $description, $header__box__content__top, $header__box__content__bottom, $othercss);
 ?>
 
-    <?php require('../layouts/PHP/header-notes.php') ?>
-
     <section class='wordarchive'>
         <h1>corea</h1>
         <h2 class='autor'>By: Mona</h2>
