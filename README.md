@@ -1,6 +1,19 @@
-# Create Notes for public access with InNotesBy
+<div align="center">
+  
+# InNotesBy
+  
+</div>
 
-![Captura de pantalla 2024-02-06 035859](https://github.com/Inbydev/InNotesBy/assets/139036190/58a1a2bd-6f8d-4035-83d4-560ecb08c085)
+![imagen](https://github.com/Inbydev/InNotesBy/assets/139036190/2c2605e4-31d6-4ec7-a880-4f7e96a4f8c3)
+
+
+<div align="center">
+  
+## Create Notes for public access with InNotesBy
+  
+</div>
+
+Read this in other languages: [🇪🇸 🇨🇱](./docs/readme/README-es.md)
 
 ## About the project
 
@@ -14,6 +27,9 @@ Check the features of the future by checking out the 'Projects' section on this 
 - ***[31 - 01 - 2024]*** New Design: improved intuitiveness and user-friendliness, easier to navigate and utilize.
 - ***[06 - 02 - 2024]*** Preview Mode: allows you to see how your content will appear once it's published. By clicking it, you can view your written content with Markdown formatting.
 
+## Changelog
+
+To go to the changelog, click [here](./changelog.md)
 
 ## Contributing
 
