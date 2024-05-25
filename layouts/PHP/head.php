@@ -1,5 +1,5 @@
 <?php
-function head($title, $description, $othercss = null, $otherjs = null) {
+function head($title, $description, $header__box__content__top, $header__box__content__bottom, $othercss = null, $otherjs = null) {
 		echo <<<HTML
 		<!DOCTYPE html>
 		<html lang="es">
@@ -34,7 +34,16 @@ function head($title, $description, $othercss = null, $otherjs = null) {
 				<h2>Inby</h2>
 				<h3>Cargando..</h3>
 			</template>
-		
+
+			<header class="header">
+				<nav>
+					<ul class="header__box">
+						$header__box__content__top
+						<li class="header__items"><a class="header__link" href="#home"><h2 class="header__logo">InNotesBy</h2></a></li>
+						$header__box__content__bottom
+					</ul>
+				</nav>
+			</header>
 		HTML;
 }
 ?>

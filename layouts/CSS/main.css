@@ -125,7 +125,7 @@ h1 span {
 }
 
 h1 span {
-    background: linear-gradient(to right, #c08bfd, #fca6fd);
+    background-image: linear-gradient(to right, #c08bfd, #fca6fd);
 }
 
 h2 {
@@ -324,11 +324,11 @@ footer a {
 }
 
 .guide h3 {
-    background: linear-gradient(to right, #c08bfd, #fca6fd);
+    background-image: linear-gradient(to right, #c08bfd, #fca6fd);
 }
 
 .guide h3.other__gradient {
-    background: linear-gradient(to right, #87cafa, #878cfa);
+    background-image: linear-gradient(to right, #87cafa, #878cfa);
 }
 
 .guide h3,
@@ -459,7 +459,7 @@ h1 span {
                 .header__logo {
                     font-size: 3rem;
                     font-family: "Mali Bold";
-                    background: linear-gradient(to right, var(--secondary-text), var(--tertiary-text));
+                    background-image: linear-gradient(to right, var(--secondary-text), var(--tertiary-text));
                     -webkit-background-clip: text;
                     background-clip: text;
                     color: transparent;
@@ -733,10 +733,12 @@ section[id] {
 
 
 .h2list {
-    background-color: linear-gradient(315deg, var(--secondary-text), var(--hover));
+    background-image: linear-gradient(315deg, var(--secondary-text), var(--hover));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+    padding: 2rem 0;
+    font-size: 2rem;
 }
 
 
