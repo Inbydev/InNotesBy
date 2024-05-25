@@ -13,13 +13,19 @@ function updateChange(event) {
     spanElement.innerText = value;
 }
 
-function bodyHidden() {
+function bodyAddHidden() {
     document.body.classList.add("hidden");
 }
 
-function bodyNoHidden() {
+function bodyRemoveHidden() {
     document.body.classList.remove("hidden");
 }
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+        bodyRemoveHidden();
+    }
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     const textarea = document.getElementById("contenido");
