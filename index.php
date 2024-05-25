@@ -2,25 +2,20 @@
 require('layouts/PHP/head.php');
 $title = 'InNotesBy ❤';
 $description = 'Proyecto de Inbydev para crear Notas!';
-$headerjs = '<script defer src="/InNotesBy/layouts/JS/header__notes.js"></script>';
 $otherjs = '
 <script defer src="/InNotesBy/layouts/JS/app.js"></script>
 <script src="/InNotesBy/layouts/JS/exclude__characters.js"></script>
 ';
-$othercss = '<link rel="stylesheet" href="/InNotesBy/layouts/CSS/InNotesBy.css">';
-head($title, $description, $headerjs, $otherjs, $othercss);
+head($title, $description, $otherjs);
 ?>
 	<?php require('layouts/PHP/header.php') ?>
     <main>
         <section class="home" id="home">
-            <h1><span>In</span>Notes<span>By</span></h1>
-            <h2>Crea tu <span>nota!</span></h2>
-            <h3><a href="#guide">Guía de como usar este proyecto:</a></h3>
+            <h1>Crea tu <span>nota!</span></h1>
+            <h2><a href="#guide">Guía de como ocupar <span>este proyecto:</span></a></h2>
         </section>
 
-        <section class="notes__section detector" id="create">
-            <button class="open__dialog__button" onclick="popup.showModal(); bodyHidden()">Crear Nota</button>
-            
+        <section class="notes__section detector" id="notes">            
             <?php require('layouts/PHP/find_notes.php') ?>
         </section>
 
@@ -29,21 +24,30 @@ head($title, $description, $headerjs, $otherjs, $othercss);
             <p>Presiona el botón <span>Crear Nota</span> para comenzar.</p>
 
             <h3 class="two">Paso 2: Ingresar Datos de la Nota</h3>
-            <p>Ya dentro, verás un formulario con una barra de botones de navegación y más abajo verás un cuadrado donde irá el contenido de la nota,
-                para ingresar información general sobre tu nota, haz clic en el botón <span>Datos de la Nota</span>.
-                Aquí podrás ingresar el nombre de la nota. Este será el nombre que se verá tanto en la <span>URL</span> como en el <span>nombre de la misma nota</span>.
-                A continuación, aquí podrás ingresar el <span>título de la nota</span>, siendo este el <span>encabezado principal</span> de la página de la nota.
-                También, aquí podrás proporcionar el <span>nombre del autor</span> de la nota para identificar al creador.</p>
+            <p>
+                Ya dentro, verás un formulario con una barra de botones de navegación y más abajo
+                verás un cuadrado donde irá el contenido de la nota, para ingresar información general
+                sobre tu nota, haz clic en el botón <span>Datos de la Nota</span>. Aquí podrás ingresar el nombre de
+                la nota. Este será el nombre que se verá tanto en la <span>URL</span> como en el <span>nombre de la
+                misma nota</span>. A continuación, aquí podrás ingresar el <span>título de la nota</span>, siendo este el 
+                <span>encabezado principal</span> de la página de la nota. También, aquí podrás proporcionar el 
+                <span>nombre del autor</span> de la nota para identificar al creador.
+            </p>
 
             <h3>Paso 3: Edición de contenido</h3>
-            <p>Dirígete a la sección <span>Contenido</span> abajo de la barra de navegación para comenzar a redactar o pegar el contenido de tu nota.
-                Para dar <span>formato</span> al texto, utiliza las herramientas encontradas en el botón <span>Edición de contenido</span>. Aquí puedes aplicar al texto seleccionado:</p>
+            <p>
+                Dirígete a la sección <span>Contenido</span> abajo de la barra de navegación para comenzar a
+                redactar o pegar el contenido de tu nota. Para dar <span>formato</span> al texto, utiliza las
+                herramientas encontradas en el botón <span>Edición de contenido</span>. Aquí puedes aplicar al
+                texto seleccionado:
+            </p>
 
             <ul>
                 <li><i>Itálica</i></li>
                 <li><b>Negrita</b></li>
                 <li><strike>Tachado</strike></li>
                 <li>Diferentes tamaños de título</li>
+                <li><a>Links</a></li>
                 <li><code>Bloques de código</code></li>
                 <li>Agregar una imagen al contenido <span><i>(opcional, múltiples imágenes dentro del contenido próximamente).</i></span></li>
             </ul>
@@ -56,8 +60,6 @@ head($title, $description, $headerjs, $otherjs, $othercss);
             <h3 class="two">Recuerda!</h3>
 
             <p>El <span>nombre de la nota</span> no puede contener <span>carácteres especiales</span>!</p>
-
-            <h3 class="not">¡Ya sabiendo esto, estás preparado para crear tu nota en <span>InNotesBy</span>!</h3>
         </section>
 
         <footer>
@@ -123,20 +125,20 @@ head($title, $description, $headerjs, $otherjs, $othercss);
 
             
             <section class="form__section">
-                <input type="text" class="form__section__input form__section__title" placeholder="Título:" name="titulo" required>
+                <input type="text" class="form__section__input form__section__title" placeholder="Título..." name="titulo" required>
                 <label>
                     <span>By: </span>
                     <span class="size-span"></span>
                     <input oninput="updateChange(event)" type="text" class="form__section__input form__section__author" placeholder="Autor" name="autor" required>
                 </label>
-                <textarea data-min-rows='0' type="text" class="form__textarea" placeholder="Contenido:" name="contenido" id="contenido" required></textarea>
+                <textarea data-min-rows='0' type="text" class="form__textarea" placeholder="Contenido..." name="contenido" id="contenido" required></textarea>
                 <div id="vistaPreviaContainer"></div>
             </section>
 		</form>
 	</dialog>
     
-	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <div id="notification">Enlace copiado al portapapeles</div>
+
 	<script src="layouts/JS/word.js"></script>
 	<script src="layouts/JS/loader.js"></script>
     <script src="layouts/JS/context__menu.js"></script>
