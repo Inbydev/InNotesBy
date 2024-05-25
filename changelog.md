@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 > 25 May 2024
 #### v1.0.3
 > 25 May 2024
-- The `head` function in `head.php` was modified to include additional parameters for the content to be added at the top and bottom of the header. This allows for more flexibility in customizing the header layout and not repeating the code in other files. Notes changed to that format. [`commit d9285e2`](https://github.com/Inbydev/InNotesBy/commit/d9285e2441c1c8f37897e132c560ffe96398f78d)
+- The `head` function in `head.php` was modified to include additional parameters for the content to be added at the top and bottom of the header. This allows for more flexibility in customizing the header layout and not repeating the code in other files. Notes changed to that format. [`commit d9285e2`](https://github.com/Inbydev/InNotesBy/commit/d9285e2441c1c8f37897e132c560ffe96398f78d), [`commit 97a8b42`](https://github.com/Inbydev/InNotesBy/commit/97a8b42cdb2c1a0b3da7d9f3b23737ac2dc24e93)
 
 #### v1.0.2
 > 25 May 2024
