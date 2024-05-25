@@ -20,7 +20,7 @@ All notable changes to this project will be documented in this file.
 - Changed theme-color to #180222. [`commit 1512b92`](https://github.com/Inbydev/InNotesBy/commit/1512b92df3c153297994c4dd35ad4592211385a5)
 - Renamed icono.ico to favicon.ico. [`commit cbc46ba`](https://github.com/Inbydev/InNotesBy/commit/cbc46ba1bda4bf06d1ae958e9f80bf117b6ec968)
 - Background div's renamed for more readability on the lines of html and css. [`commit 1512b92`](https://github.com/Inbydev/InNotesBy/commit/1512b92df3c153297994c4dd35ad4592211385a5)
-- Added changelog. [`commit `]()
+- Added changelog. [`commit e41fec3`](https://github.com/Inbydev/InNotesBy/commit/e41fec34478c5c03fa10ca53fbb75a6464ecc77e)
 
 
 #### v1.0.0
