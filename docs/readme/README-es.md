@@ -29,7 +29,7 @@ Consulta las características futuras en la sección ['Proyectos'](https://githu
 
 ## Registro de cambios
 
-Para ir al registro de cambios, haz clic [aquí](./changelog.md)
+Para ir al registro de cambios, haz clic [aquí](/changelog.md)
 
 ## Contribuir
 
