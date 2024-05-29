@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ### Changelog
 
 All notable changes to this project will be documented in this file.
@@ -100,4 +99,3 @@ All notable changes to this project will be documented in this file.
 > 16 July 2023
 
 - Created the project "InTextBy"
->>>>>>> f2bedff34ed7626327d79074b3d41965f0823844
